@@ -1,0 +1,4 @@
+table[dir="rtl"] th,
+table[dir="rtl"] td {
+  text-align: right !important;
+}

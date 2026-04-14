@@ -1,0 +1,978 @@
+{
+"back": "رجوع",
+  "delete": "حذف",
+    "deleteBatchConfirm": "هل أنت متأكد أنك تريد حذف هذه الدفعة؟",
+    "deleteProduct": "حذف المنتج",
+    "deleteProductConfirm": "سيتم حذف المنتج وجميع دفعاته.",
+    "edit": "تعديل",
+    "editBatch": "تعديل الدفعة",
+    "editProduct": "تعديل المنتج",
+"productDetails": "تفاصيل المنتج",
+    "saveChanges": "حفظ التغييرات",
+    "saveProduct": "حفظ المنتج",
+    "saveSuccess": "تم حفظ المنتج بنجاح",
+    "saved": "تم الحفظ بنجاح",
+ "cancel": "إلغاء",
+ "confirm":"تأكيد",
+ "confirmSaveProduct":"هل أنت متأكد أنك تريد حفظ التعديلات؟",
+"confirmSaveBatch":"هل أنت متأكد أنك تريد حفظ التعديلات؟",
+  "app": {
+    "title": "D-Pharma"
+  },
+
+  "nav": {
+     "history": "السجل",
+  "salesHistory": "سجل المبيعات",
+  "returnHistory": "سجل الإرجاعات",
+    "dashboard": "لوحة التحكم",
+    "debtBook": "دفتر الديون",
+    "logout": "تسجيل الخروج",
+    "pos": "البيع",
+    "security": "الأمان",
+    "settings": "الإعدادات",
+    "suppliers": "الموردون"
+  },
+
+  "stock": {"batch": "الدفعة",
+  "expiry": "الصلاحية",
+  "qty": "الكمية",
+  "price": "السعر",
+    	"total":"الإجمالي",
+      "hideStorage":"إخفاء بيانات التخزين",
+"showStorage":"اظهار بيانات التخزين",
+    "addCategory": "إضافة فئة جديدة",
+    "addNewItem": "إضافة دواء جديد",
+    "alternativesFor": "عرض بدائل لـ {{name}} (التركيب: {{form}})",
+    "batches": "الدفعات",
+    "batchId": "رقم الدفعة",
+    "barcode": "الباركود",
+    "cabinet": "الخزانة",
+    "category": "الفئة",
+    "columns": {
+      "actions": "إجراءات",
+      "batch": "الدفعة",
+      "expiry": "تاريخ الصلاحية",
+      "location": "الموقع",
+      "name": "الاسم",
+      "qty": "الكمية"
+    },
+    "export": "تصدير",
+    "expired": "منتهي",
+    "expiredItems": "منتج منتهي الصلاحية",
+    "expiredLabel": "منتهي",
+    "expiryDate": "تاريخ الصلاحية",
+    "filter": "فلترة",
+    "filters": {
+      "all": "كل الأدوية",
+      "inStock": "متوفر",
+      "lowStock": "كمية منخفضة",
+      "outOfStock": "غير متوفر"
+    },
+    "form": "التركيب",
+    "inStock": "متوفر",
+    "isAccessory": "اكسسوار",
+    "location": "الموقع",
+    "lowStock": "كمية منخفضة",
+    "minQty": "حد الكمية الأدنى",
+    "nameAr": "الاسم بالعربية",
+    "nameEn": "الاسم بالإنجليزية",
+    "noResults": "لا توجد نتائج.",
+    "outOfStock": "غير متوفر",
+    "pagination": {
+      "showing": "عرض {{from}}–{{to}} من {{total}} صنف"
+    },
+    "purchasePrice": "سعر الشراء",
+    "quantity": "الكمية",
+    "row": "الصف",
+    "salePrice": "سعر البيع",
+    "scanOrAdd": "إضافة دواء جديد",
+    "searchPlaceholder": "ابحث بالاسم أو الباركود...",
+    "searchUniversal": "البحث في قاعدة بيانات الأدوية...",
+    "selectCategory": "اختر فئة",
+    "shelf": "الرف",
+    "stats": {
+      "almostExpired": "قريب الانتهاء",
+      "almostExpiredItems": "منتجات أوشكت على الانتهاء",
+      "criticalItems": "منتج على وشك النفاذ",
+      "expired": "منتهي الصلاحية",
+      "expiredItems": "منتج منتهي الصلاحية",
+      "lowStock": "منتج بكمية منخفضة",
+      "lowStockAlerts": "تنبيهات انخفاض المخزن",
+      "outOfStock": "منتج غير متوفر",
+      "salesToday": "مبيعات اليوم",
+      "totalInventory": "إجمالي المخزن",
+      "updated": "تم التحديث {{time}}"
+    },
+    "storage": "تفاصيل التخزين",
+    "subtitle": "تتبع المخزن، تواريخ الانتهاء والأسعار.",
+    "title": "إدارة المخزن",
+    "totalValue": "القيمة الإجمالية",
+    "unknownName": "اسم غير معروف"
+  },
+"backup": {
+  "enterPasswordToRestore": "أدخل كلمة المرور لاستعادة النسخة الاحتياطية",
+  "enterPasswordToEncrypt": "أدخل كلمة مرور لتشفير النسخة الاحتياطية",
+
+  "restored": "تم استعادة النسخة الاحتياطية بنجاح",
+  "restoreFailed": "فشل استعادة النسخة الاحتياطية",
+
+  "failed": "فشل النسخ الاحتياطي",
+  "saved": "تم حفظ النسخة الاحتياطية بنجاح"
+},
+  "settings": {
+    
+  "appVersion": "نسخة التطبيق",
+  "developerName": "اسم المطوّر",
+  "email": "البريد الإلكتروني",
+  "contactWhatsapp": "تواصل عبر واتساب",
+    "disabled":"معطل",
+    "enabled":"مفعل",
+ 
+    "removeLogo":"حذف الشعار",
+    "cashBoxReset": "خيارات إعادة ضبط الصندوق",
+"resetDaily": "إعادة الضبط يومياً",
+"reset12Hours": "إعادة الضبط كل 12 ساعة",
+"resetWeekly": "إعادة الضبط أسبوعياً",
+"resetManual": "إعادة الضبط يدوياً",
+
+    "backup": {
+
+      "chooseFile": "اختر ملف",
+    "noFileChosen": "لم يتم اختيار ملف",
+       "verifyOK": "النسخة الاحتياطية صالحة",
+    "verifyFailed": "فشل التحقق من النسخة الاحتياطية",
+    "invalidEncrypted": "هذا الملف ليس نسخة احتياطية مشفرة صالحة",
+      "delete": "حذف",
+      "saveInsideFolder": "حفظ النسخة الاحتياطية داخل المجلد",
+"verify": "تحقق",
+      "auto": "النسخ الاحتياطي التلقائي",
+      "chooseFolder": "اختر مجلد النسخ الاحتياطي",
+      "cloud": "النسخ الاحتياطي السحابي",
+      "create": "إنشاء نسخة احتياطية",
+      "createDescription": "قم بتنزيل نسخة احتياطية كاملة لبيانات الصيدلية.",
+      "daily": "يومي",
+      "download": "تنزيل النسخة الاحتياطية",
+      "enterPasswordToEncrypt": "أدخل كلمة مرور النسخة الاحتياطية لتشفير النسخة",
+      "enterPasswordToRestore": "أدخل كلمة مرور النسخة الاحتياطية للاستعادة",
+      "failed": "فشل إنشاء النسخة الاحتياطية.",
+      "folderSelected": "المجلد المحدد للنسخ الاحتياطي",
+      "googleDrive": "النسخ الاحتياطي إلى Google Drive",
+      "history": "سجل النسخ الاحتياطي",
+      "info": "معلومات النسخ الاحتياطي",
+      "lastBackup": "آخر نسخة احتياطية",
+      "manual": "يدوي",
+      "noBackupYet": "لم يتم إنشاء أي نسخة احتياطية بعد",
+      "noFolder": "لم يتم اختيار مجلد للنسخ الاحتياطي",
+      "oneDrive": "النسخ الاحتياطي إلى OneDrive",
+      "restore": "استعادة النسخة الاحتياطية",
+      "restoreDescription": "قم برفع ملف النسخة الاحتياطية لاستعادة البيانات.",
+      "restoreError": "ملف النسخة الاحتياطية غير صالح.",
+      "restoreFailed": "فشلت عملية الاستعادة. كلمة المرور خاطئة أو الملف تالف.",
+      "restoreSuccess": "تمت استعادة النسخة الاحتياطية بنجاح!",
+      "restored": "تمت استعادة النسخة الاحتياطية بنجاح.",
+      "saveZip": "حفظ النسخة الاحتياطية بصيغة ZIP في المجلد",
+      "saved": "تم حفظ النسخة الاحتياطية بنجاح!",
+      "weekly": "أسبوعي"
+    },
+    "back": "رجوع",
+    "comingSoon": "المزيد من الإعدادات قريباً...",
+    "currencySymbol": "رمز العملة",
+
+    
+
+    "expireInMonths": "ينتهي خلال (أشهر)",
+    "expiryWarningDate": "تاريخ التحذير من انتهاء الصلاحية",
+    "expiryWarningPeriod": "فترة التحذير قبل انتهاء الصلاحية",
+    "language": "اللغة",
+    "months": "أشهر",
+    "newCurrency": "الجديدة",
+    "newShort": "",
+    "oldCurrency": "القديمة",
+    "oldShort": "",
+    "pharmacyLogo": "شعار الصيدلية",
+    "pharmacyName": "تفاصيل الصيدلية ",
+    
+    "tabs": {
+      "about": "حول",
+      "backup": "النسخ الاحتياطي",
+      "general": "عام",
+      "inventory": "المخزن",
+      "pos": "نقطة البيع",
+     
+    "activation": "التفعيل"
+  
+    },
+    "theme": "المظهر",
+    "themeBlue": "أزرق",
+    "themeGreen": "أخضر",
+    "title": "الإعدادات",
+    "update": {
+"universalViewer": {
+      "title": "عارض قاعدة البيانات الشاملة",
+      "description": "عرض، بحث، تصفية، وتعديل جميع المنتجات البالغ عددها ٢٠٬٢٠٣ في قاعدة البيانات الشاملة.",
+      "openButton": "فتح العارض"
+    },
+
+      "check": "التحقق من التحديثات",
+      "current": "الإصدار الحالي",
+      "description": "تحقق من وجود تحديثات جديدة لبيانات الأدوية.",
+      "download": "تنزيل التحديث",
+      "latest": "أحدث إصدار",
+      "title": "تحديث قاعدة البيانات"
+    },
+    "useNewCurrency": "التسعير بالعملة الجديدة"
+  },
+
+  "pos": {
+    "PreviewReceipt":" معاينة الفاتورة",
+    "debtPartialPaid":"دفع جزئي",
+      "items": "المواد",
+    "item": "المادة",
+    "qty": "الكمية",
+    "printInvoice": "طباعة الفاتورة",
+    "invoice": "فاتورة",
+    "product":"المنتج",
+    "actions": "الإجراءات",
+     "unitType": "نوع البيع",
+  "envelope": "ظرف",
+  "box": "علبة",
+  "envelopesInside": "عدد الظروف داخل العلبة",
+    "addCustomer": "إضافة زبون",
+    "addToDebt": "إضافة إلى الدين",
+    "barcodeNotFound": "الباركود غير موجود",
+    "card": "بطاقة",
+    "cash": "نقداً",
+    "cancel": "إلغاء",
+    "checkout": "الدفع",
+    "clearCart": "تفريغ السلة",
+    "clearFilters": "مسح الفلاتر",
+    "close": "إغلاق",
+    "completeSale": "إتمام البيع",
+    "confirmSale": "تأكيد البيع",
+    "currentSale": "المبيعات الحالية",
+    "customer": "الزبون",
+    "customerDebtBook": "دفتر ديون الزبائن",
+    "date": "التاريخ",
+    "debt": "دين",
+    "debtLimitNote": "* حد الدين لهذا العميل: {{limit}}",
+    "discount": "الخصم",
+    "emptyCart": "السلة فارغة",
+    "invoiceId": "رقم الفاتورة",
+    "itemsInBasket": "{{count}} عنصر",
+    "location": "الموقع",
+    "noCustomer": "بدون زبون",
+    "noSalesFound": "لا توجد مبيعات",
+    "paymentMethod": "طريقة الدفع",
+    "price": "السعر",
+    "printReceipt": "طباعة الفاتورة",
+    "quantity": "الكمية",
+    "saleCompleted": "تمت عملية البيع",
+    "salesHistory": "سجل المبيعات",
+    "searchInvoice": "ابحث برقم الفاتورة أو اسم الزبون أو اسم الدواء ",
+    "searchPlaceholder": "ابحث عن دواء أو امسح الباركود...",
+    "selectCustomer": "اختيار الزبون",
+    "showOnMap": "عرض على الخريطة",
+    "subtotal": "المجموع قبل الضريبة",
+    "tax": "الضريبة",
+    "taxPercent": "نسبة الضريبة",
+    "title": "نقطة البيع",
+    "total": "الإجمالي",
+    "totalAmount": "المبلغ الإجمالي",
+    "transactionSummary": "ملخص العملية",
+    "cashBox":"صندوق الصيدلية",
+    "walkInCustomer": "زبون مباشر"
+  },
+  
+  "cashbox": {
+     "defaultNote": "تحديث صندوق الصيدلية",
+    "closedManually": "تم إغلاق الصندوق يدويًا",
+    "closedOnSignout": "تم إغلاق الصندوق عند تسجيل الخروج",
+    "customerPaymentNote": "مبلغ من قبل {{name}} لتسديد الدين المترتب عليه",
+    "withdrawError": "لا يمكنك سحب مبلغ أكبر من الرصيد الحالي. رصيدك الحالي هو {{balance}}",
+"homeWithdrawError": "لا يمكنك سحب مبلغ أكبر من الرصيد الحالي. رصيدك الحالي هو {{balance}}",
+
+ "currentBalance": "الرصيد الحالي",
+"currentBalanceSubtitle": "إجمالي النقد المتوفر الآن",
+"dailyProfitSubtitle": "الربح المحقق اليوم",
+"monthlyProfitSubtitle": "الربح المحقق هذا الشهر",
+
+
+  "withdraw": "سحب مبلغ",
+  
+
+  "enterAmount": "أدخل المبلغ",
+  "enterReason": "أدخل السبب",
+  "cancel": "إلغاء",
+
+  
+
+ 
+  "filterWithdraw": "السحوبات",
+
+  
+     "withdrawRecord": "سحب نقدي",
+
+  "filterSupplierPayments": "مدفوعات الموردين",
+  "filterSales": "المبيعات",
+  "filterManualInputs": "إدخالات يدوية",
+  "filterResets": "إعادة التعيين",
+  "filterDailyCash": "النقد اليومي",
+
+  
+  "supplierPaymentRecord": "دفعة مورد",
+  "dailyCashRecord": "تحويل نقد يومي",
+  "resetRecord": "إعادة تعيين",
+  "monthlyResetRecord": "إعادة تعيين شهرية",
+  "manualResetRecord": "إعادة تعيين يدوية",
+
+  
+    "manualInputRecord": "إدخال يدوي",
+  "saleRecord": "عملية بيع",
+  "income": "إيراد",
+    "cash": "صندوق الصيدلية",
+"profit": "الربح",
+
+    "historyTitle": "سجل الصندوق",
+    "filterDay": "اليوم",
+    "filterWeek": "هذا الأسبوع",
+    "filterMonth": "هذا الشهر",
+    "filterAll": "الكل",
+    "exportCSV": "تصدير CSV",
+    "noHistory": "لا يوجد سجل",
+    "chartIncome": "الإيرادات",
+    "dailyProfit": "الربح اليومي",
+    "monthlyProfit": "الربح الشهري"
+  },
+
+  "debtBook": {
+   
+    "printTitle": "تقرير ديون العملاء",
+    "printAll": "طباعة جميع العملاء",
+    "exportPDF": "تصدير PDF",
+    "exportExcel": "تصدير Excel",
+    "kindPurchase": "عملية  شراء",
+    "kindPayment": "دفعة",
+    "kind": "النوع",
+    "date": "التاريخ",
+    
+  "deleteCustomerTitle": "حذف الزبون",
+  "cannotDeleteHasDebt": "لا يمكن حذف هذا الزبون لأنه ما زال لديه دين غير مسدد.",
+  "confirmDelete": "هل أنت متأكد أنك تريد حذف {{name}}؟",
+
+    "addCustomer": "إضافة عميل جديد",
+    "amount": "المبلغ",
+    "cancel": "إلغاء",
+    "cards": {
+      "criticalArrears": {
+        "description": "{{count}} عميل لديهم ديون متأخرة لأكثر من 30 يومًا",
+        "title": "ديون حرجة",
+        
+  "overdue": "متأخرون لأكثر من 30 يوم",
+  "highestDebt": "أعلى ديون"
+      },
+      "debtForecast": {
+        "description": "توقع اتجاه الديون بناءً على النشاط الأخير",
+        "footer": "تحليلات",
+        "title": "توقعات الديون"
+      },
+      "recentSettlements": {
+        "description": "متابعة المدفوعات الأخيرة والديون المسددة",
+        "title": "التسويات الأخيرة"
+      }
+    },
+    "columns": {
+      "actions": "الإجراءات",
+      "customer": "الزبون",
+      "lastPurchase": "آخر عملية شراء",
+      "paymentHistory": " مدة الدين بالأسابيع",
+      "totalDebt": "إجمالي الدين"
+    },
+    "confirm": "تأكيد",
+    "customer": "الزبون",
+    "enterAmount": "أدخل المبلغ المدفوع",
+    "enterPastDebt": "أدخل الدين السابق (اختياري)",
+    "idLabel": "المعرف",
+    "lastPurchase": "آخر عملية شراء",
+    "noCustomers": "لا يوجد عملاء",
+    "noPurchases": "لا توجد مشتريات",
+    "pageSubtitle": "متابعة الديون المستحقة وحركة الزبائن",
+    "pageTitle": "دفتر الديون",
+    "paymentHistory": "سجل الدفع",
+    "settlePayment": "تسوية الدين",
+    "showingRange": "عرض {{start}}–{{end}} من أصل {{total}} عميل",
+    "status": {
+      "noPurchases": "لا توجد مشتريات",
+      "over15": "متأخر 15 يومًا",
+      "over30": "متأخر أكثر من 30 يومًا",
+      "withinTerm": "ضمن المدة"
+    },
+    "subtitle": "عرض شامل لجميع الزبائن ذوي الأرصدة المستحقة",
+    "title": "ديون العملاء",
+    "totalDebt": "إجمالي الدين",
+    "totalDebtFor": "إجمالي الديون المستحقة لـ",
+    "totalOutstanding": "إجمالي الديون المستحقة",
+    "vsLastMonth": "مقارنة بالشهر الماضي"
+  },
+
+  "common": {
+    "delete": "حذف",
+    "add": "إضافة",
+    "cancel": "إلغاء",
+    "collapse": "إخفاء",
+    "confirm": "تأكيد",
+    "expand": "عرض",
+    "search": "بحث",
+     "actions": "الإجراءات",
+    "edit": "تعديل"
+  },
+
+  "customer": {
+  
+    "currentBalance": "الرصيد الحالي",
+"balanceTimeline":"ملخص",
+  "pastBalance": "الرصيد السابق",
+
+  "paidDuringSales": "مدفوع أثناء الشراء",
+ 
+  "noItems": "لا توجد مواد",
+ 
+  "sale": "عملية بيع",
+  
+  "totalPaid": "إجمالي المدفوع",
+  "totalRefundCost": "إجمالي قيمة الإرجاع",
+  "extraRefund": "مبلغ زائد مُعاد",
+  
+  "extra_refund": "مبلغ زائد مُعاد",
+  
+
+    "return": "إرجاع",
+    "financialSummary": "الملخص المالي",
+    "totalPurchases": "إجمالي المشتريات",
+    "totalPayments": "إجمالي المدفوعات",
+    "remainingBalance": "الرصيد المتبقي",
+    "details": "تفاصيل الزبون",
+    "initialDebt": "الدين الابتدائي",
+    "name": "اسم الزبون",
+    "noPayments": "لا توجد مدفوعات",
+    "noPurchases": "لا توجد مشتريات",
+    "payment": "دفعة",
+    "payments": "المدفوعات",
+    "phone": "رقم الهاتف",
+    "purchases": "المشتريات"
+  },
+
+  "sort": {
+    "debt": "الفرز حسب الدين",
+    "lastPurchase": "الفرز حسب آخر شراء",
+    "name": "الفرز حسب الاسم"
+  },
+
+  "security": {
+"title":"الأمان",
+    "adminOnly": "فقط المسؤول يمكنه تعديل إعدادات الأمان.",
+    "backupPassword": {
+      "title":" كلمة سر النسخ الاحتياطي",
+      "adminOnly": "فقط المسؤول يمكنه تغيير كلمة مرور النسخ الاحتياطي.",
+      "change": "تغيير",
+      "changeTitle": "تغيير كلمة مرور النسخ الاحتياطي",
+      "changed": "تم تغيير كلمة مرور النسخ الاحتياطي بنجاح.",
+      "confirm": "تأكيد كلمة المرور",
+      "invalidOld": "كلمة المرور القديمة غير صحيحة.",
+      "mismatch": "كلمتا المرور غير متطابقتين.",
+      "new": "كلمة المرور الجديدة",
+      "old": "كلمة المرور القديمة",
+      "set": "تعيين",
+      "setSuccess": "تم تعيين كلمة مرور النسخ الاحتياطي بنجاح.",
+      "setTitle": "تعيين كلمة مرور النسخ الاحتياطي"
+    },
+    "login": {
+      "button": "تسجيل الدخول",
+      "defaultHint": "المسؤول الافتراضي: اسم المستخدم \"admin\"، كلمة المرور \"admin123\". يرجى تغييرها من تبويب الأمان.",
+      "genericError": "فشل تسجيل الدخول. حاول مرة أخرى.",
+      "invalidPassword": "كلمة المرور غير صحيحة.",
+      "password": "كلمة المرور",
+      "subtitle": "أدخل بياناتك للوصول إلى النظام.",
+      "title": "تسجيل الدخول",
+      "userNotFound": "المستخدم غير موجود.",
+      "username": "اسم المستخدم"
+    },
+    "users":{"title": "الأمان"}
+    
+  },
+  "users": {
+    "back": "رجوع",
+    "manageUsers": "إدارة المستخدمين",
+    "addUser": "إضافة مستخدم",
+    "username": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "role": "الدور",
+    "roleUser": "مستخدم",
+    "roleAdmin": "مدير",
+    "add": "إضافة",
+    "delete": "حذف",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "confirmDelete": "تأكيد الحذف",
+    "deleteUserPrompt": "هل أنت متأكد أنك تريد حذف",
+    "accessDenied": "غير مسموح بالدخول",
+    "cannotDeleteSelf": "لا يمكنك حذف حسابك الخاص",
+    "changeUsername": "تغيير اسم المستخدم",
+    "changeRole": "تغيير الدور",
+    "updateRole": "تحديث الدور",
+    "resetPassword": "إعادة تعيين كلمة المرور",
+    "newPassword": "كلمة المرور الجديدة",
+    "confirmNewPassword": "تأكيد كلمة المرور الجديدة",
+    "reset": "إعادة تعيين",
+    "passwordMismatch": "كلمتا المرور غير متطابقتين",
+    "passwordResetSuccess": "تمت إعادة تعيين كلمة المرور بنجاح",
+    "search": "بحث عن مستخدم...",
+    "filterRole": "تصفية حسب الدور",
+    "allRoles": "جميع الأدوار"
+  },
+"supplier": {
+    "print": "طباعة",
+  "exportPdf": "تصدير PDF",
+    "searchReturnInvoice": "بحث برقم الإرجاع",
+    "clearFilters": "مسح الفلاتر",
+    "noReturnsFound": "لا توجد إرجاعات",
+    "returnId": "رقم الإرجاع",
+   
+    "actions": "الإجراءات",
+    "viewItems": "عرض المواد",
+"returnSuccess": "تم تنفيذ إرجاع المواد للمورد بنجاح.",
+    "returnError": "حدث خطأ أثناء تنفيذ عملية الإرجاع.",
+  "validation_noReturnQty": "يرجى إدخال كمية إرجاع لمنتج واحد على الأقل.",
+   "returnNotEnoughCash": "⚠️ لا يوجد مبلغ كافٍ في الصندوق.\nتم خصم المبلغ الناقص {{missing}} من رصيد المورد.",
+    "returnDefaultNote": "استرداد نقدي لإرجاع مواد إلى المورد",
+"returnHistoryTitle": "سجل المرتجعات إلى الموردين",
+  "returnDate": "التاريخ",
+  "returnSupplier": "المورد",
+  "returnAmount": "المبلغ",
+  "returnedItems": "الأصناف المرجعة",
+  "product": "المنتج",
+  "qty": "الكمية",
+  "amount": "المبلغ",
+  "unknownSupplier": "مورد غير معروف",
+
+  "expiry":"تاريخ الصلاحية",
+  "returnTitle": "إرجاع مواد إلى المورد",
+  "returnButton": "إرجاع إلى المورد",
+  "returnScanButton": "إرجاع عن طريق المسح",
+  "returnSelectSupplier": "اختر المورد",
+  "returnItems": "المواد المراد إرجاعها",
+  "returnQuantity": "الكمية المرجعة",
+  "returnReason": "السبب",
+  "returnReason_nearExpiry": "قريبة الانتهاء",
+  "returnReason_expired": "منتهية الصلاحية",
+  "returnReason_damaged": "تالف",
+  "returnReason_wrongItem": "صنف خاطئ",
+  "returnReason_other": "أخرى",
+  "returnReason_otherPlaceholder": "أدخل السبب",
+  "refundMethod": "طريقة التسوية",
+  "refundMethod_cash": "استرداد نقدي",
+  "refundMethod_credit": "رصيد لدى المورد",
+  "refundMethod_exchange": "استخدام لقيمة مواد جديدة",
+  "totalRefund": "قيمة الإرجاع",
+  "confirmReturn": "تأكيد الإرجاع",
+  "cancel": "إلغاء",
+  "validation_selectSupplier": "يرجى اختيار المورد",
+  "validation_noItems": "يرجى اختيار مادة واحدة على الأقل للإرجاع",
+  "validation_invalidQuantity": "يجب أن تكون الكمية المرجعة أكبر من 0 ولا تتجاوز الكمية في المخزون",
+  "returnNote": "إرجاع مواد إلى المورد {{name}}",
+  "returnReasonNote": "السبب: {{reason}}",
+  "returnCompleted": "تم إرجاع المواد إلى المورد بنجاح"
+},
+
+  "suppliers": {
+"returnToSupplier": "إرجاع للمورد",
+  "scanToReturn": "مسح للإرجاع",
+  "scanBarcode": "امسح الباركود:",
+  "returnFromThisInvoice": "إرجاع من هذه الفاتورة",
+  "purchaseId": "رقم الفاتورة",
+
+     "purchaseHistory": "سجل المشتريات",
+  "noPurchases": "لا توجد مشتريات",
+  "totalCost": "التكلفة الإجمالية",
+  "amountPaid": "المبلغ المدفوع",
+    "items": "العناصر",
+    
+  "method_return": "إرجاع إلى المورد",
+  "validation_selectSupplier": "يرجى اختيار المورد",
+  "validation_noItems": "يرجى اختيار مادة واحدة على الأقل للإرجاع",
+  "validation_invalidQuantity": "يجب أن تكون الكمية المرجعة أكبر من 0 ولا تتجاوز الكمية في المخزون",
+  "returnNote": "إرجاع مواد إلى المورد {{name}}",
+  "returnReasonNote": "السبب: {{reason}}",
+     "continueToPayment": "متابعة إلى الدفع",
+    "totalStockCost": "إجمالي فاتورة الشراء",
+    "product": "المنتج",
+    "stockSummary":"ملخص فاتورة الإدخال",
+    "addStock":"إضافة إلى المخزن",
+  "addStockFor":"إضافة إلى المخزن",
+  "title": "حسابات المورّدين",
+  "searchPlaceholder": "ابحث عن المورّدين...",
+  "placeholderIntro": "ستظهر هنا أرصدة المورّدين، حالة الدفعات، وآخر العمليات.",
+"nextProduct":"المنتج التالي",
+"continueToSummary":"ملخص عملية الشراء",
+  "accountsPayable": "الحسابات المستحقة",
+  "totalOutstanding": "إجمالي الرصيد المستحق",
+  "totalOutstandingDescription": "يتم حالياً إدارة {{count}} مورّدين رئيسيين مع {{pending}} دفعة بانتظار الدفع.",
+  "nextPaymentDue": "موعد الدفعة القادمة",
+  "noUpcomingPayment": "لا توجد دفعات قادمة",
+  "processBatch": "معالجة الدفعات",
+
+  "totalOwed": "المبلغ المستحق",
+  "status": {
+    "active": "نشط",
+    "overdue": "متأخر",
+    "inactive": "غير نشط"
+  },
+  "net": "صافي {{days}} يوم",
+  "viewStatement": "عرض الكشف",
+  "makePayment": "إجراء دفعة",
+  "addSupplier": "إضافة مورّد جديد",
+
+  "recentPayments": "المدفوعات الأخيرة",
+  "paymentTo": "دفعة إلى {{name}}",
+  "transactionId": "رقم العملية: {{id}} • {{timeAgo}}",
+
+  "transactionHub": "مركز العمليات",
+  "paymentType": "نوع الدفعة",
+  "payAll": "دفع كامل",
+  "partial": "دفع جزئي",
+  "amountToPay": "المبلغ المطلوب دفعه",
+  "remainingBalance": "الرصيد المتبقي",
+  "confirmTransaction": "تأكيد العملية",
+  
+ 
+  
+  "editSupplier": "تعديل المورد",
+  "deleteSupplier": "حذف المورد",
+  "deleteConfirm": "هل أنت متأكد أنك تريد حذف {{name}}؟",
+  "delete": "حذف",
+  "cancel": "إلغاء",
+  "save": "حفظ",
+  
+  "viewDetails": "عرض التفاصيل",
+  
+  "currentBalance": "الرصيد الحالي",
+  "totalPaid": "إجمالي المدفوع",
+  "outstanding": "المستحق",
+  "outstandingInvoices": "الفواتير المستحقة",
+  "noOutstanding": "لا توجد فواتير مستحقة",
+  "paymentHistory": "سجل الدفعات",
+  "noPayments": "لا توجد دفعات مسجلة",
+  "date": "التاريخ",
+  "amount": "المبلغ",
+  "method": "طريقة الدفع",
+  "note": "ملاحظة",
+  "monthlyPayments": "المدفوعات الشهرية",
+  "contactInfo": "معلومات التواصل",
+  "phone": "رقم الهاتف",
+  "notes": "ملاحظات",
+  "name": "الاسم",
+  "icon": "الأيقونة",
+  "imageUrl": "الصورة",
+  "pastBalance": "الرصيد الافتتاحي"
+
+},
+ "notifications": {
+    "noNotifications": "لا توجد إشعارات",
+
+    "expired": "المنتج {{name}} منتهي الصلاحية",
+    "nearExpiry": "المنتج {{name}} أوشك على الانتهاء",
+    "outOfStock": "المنتج {{name}} غير متوفر",
+    "lowStock": "المنتج {{name}} بكمية منخفضة",
+
+    "highDebt": "الزبون {{name}} لديه دين مرتفع",
+    "overdueCustomer": "الزبون {{name}} لديه دين متأخر",
+
+    "updateAvailable": "هناك تحديث جديد متوفر",
+    "updateDatabase": "هناك تحديث لقاعدة البيانات",
+
+    "groups": {
+      "stock": "تنبيهات المخزون",
+      "expiry": "تنبيهات الصلاحية",
+      "customers": "تنبيهات الزبائن",
+      "system": "تنبيهات النظام"
+    }
+  },
+"profile": {
+   
+    "oldPassword": "كلمة المرور القديمة",
+    "newPassword": "كلمة المرور الجديدة",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "save": "حفظ",
+    "wrongOldPassword": "كلمة المرور القديمة غير صحيحة",
+    "passwordMismatch": "كلمتا المرور غير متطابقتين",
+    "passwordUpdated": "تم تحديث كلمة المرور بنجاح",
+  "role": "الدور",
+  "changePassword": "تغيير كلمة المرور",
+  "securitySettings": "إعدادات الأمان",
+    "title": "الملف الشخصي",
+  "preferences": "التفضيلات",
+  "security": "الأمان"
+},
+"logout": "تسجيل الخروج",
+"supplierStats": {
+  "totalOutstandingBalance": "إجمالي الرصيد المستحق",
+  "increase": "زيادة بنسبة {{percent}}%",
+  "managingSuppliers": "يتم حالياً إدارة {{count}} موردين مع {{pending}} دفعة  بانتظار الدفع",
+  "nextPaymentDue": "موعد الدفع القادم",
+  "noUpcomingPayments": "لا توجد دفعات قادمة",
+  "processBatch": "معالجة الدفعات"
+},
+
+"recentPayments": {
+  "title": "آخر الدفعات",
+  "noRecentPayments": "لا توجد دفعات حديثة"
+},
+"paymentModal": {
+  "title": "تسجيل دفعة",
+  "amount": "المبلغ",
+  "method": "طريقة الدفع",
+  "note": "ملاحظة",
+  "submit": "تأكيد الدفع",
+  "cancel": "إلغاء"
+},
+"supplierDetails": {
+  "dashboard": "لوحة تحكم المورد",
+  "contactInfo": "معلومات التواصل",
+  "outstandingInvoices": "الفواتير المستحقة",
+  "monthlyPayments": "المدفوعات الشهرية",
+  "paymentHistory": "سجل الدفعات",
+  "noInvoices": "لا توجد فواتير",
+  "noPayments": "لا توجد دفعات"
+},
+"buttons": {
+  "edit": "تعديل",
+  "delete": "حذف",
+  "save": "حفظ",
+  "cancel": "إلغاء",
+  "close": "إغلاق",
+  "pay": "دفع"
+},
+"common.back":"رجوع",
+"common.delete":"حذف",
+
+  "activation": {
+
+
+    
+    "title": "تفعيل نظام D-Pharma",
+  
+  "trial": "نسخة تجريبية",
+ 
+  "no_device_id": "لم يتم تحميل معرف الجهاز",
+  "deactivated_title": "تم إلغاء تفعيل الترخيص",
+  "deactivated_msg": "تم إلغاء تفعيل هذا الترخيص. يرجى التواصل مع الدعم.",
+  "trial_used": "الأيام المستخدمة من التجربة",
+  "trial_left": "الأيام المتبقية",
+  "plan": "الخطة",
+  "expires": "تاريخ انتهاء التفعيل",
+  "expired_msg": "انتهت الفترة التجريبية. يرجى التفعيل للمتابعة.",
+  "no_device": "لم يتم تحميل معرف الجهاز. يرجى اختيار مجلد الترخيص.",
+  "select_folder": "اختيار مجلد الترخيص",
+  "connect_server": "الاتصال بالخادم",
+  "select_file": "اختيار ملف التفعيل (.txt)",
+  "device_loaded": "تم تحميل معرف الجهاز بنجاح",
+  "device_load_failed": "فشل تحميل معرف الجهاز",
+  "file_invalid": "ملف التفعيل غير صالح",
+  "file_read_error": "تعذر قراءة ملف التفعيل",
+  "success": "تم التفعيل بنجاح",
+  "error_generic": "فشل في عملية التفعيل",
+  "server_success": "تمت مزامنة التفعيل مع الخادم",
+  "server_offline": "تعذر الاتصال بخادم التفعيل. حاول لاحقاً.",
+  "device_id": "معرف الجهاز",
+  "copy": "نسخ",
+  "paste_code": "ألصق رمز التفعيل هنا",
+  
+  "send_whatsapp": "إرسال معرف الجهاز عبر واتساب",
+  "whatsapp_message": "مرحباً، هذا هو معرف جهاز نظام D-Pharma الخاص بي:",
+   
+    "trialUsed": "أيام التجربة المستخدمة",
+    "trialLeft": "الأيام المتبقية",
+  
+    "enterCode": "أدخل رمز التفعيل",
+    "status": "الحالة",
+  
+    "activated": "مفعل",
+    "expired": "منتهي",
+   
+    "activate": "تفعيل"
+   
+  
+  },
+  "homecash": {
+    "amountInvalid": "الرجاء إدخال مبلغ صالح.",
+"homeWithdrawError": "لا يمكنك سحب مبلغ أكبر من الرصيد الحالي. رصيدك الحالي هو {{balance}}",
+  "enterReason": "أدخل السبب",
+
+
+  "withdraw": "سحب مبلغ",
+ 
+
+
+  "saleRecord": "عملية بيع",
+  "supplierPaymentRecord": "دفعة مورد",
+  "dailyCashRecord": "تحويل نقد يومي",
+  "resetRecord": "إعادة تعيين",
+
+  "filterSupplierPayments": "مدفوعات الموردين",
+  "filterSales": "المبيعات",
+  "filterManualInputs": "إدخالات يدوية",
+  "filterResets": "إعادة التعيين",
+  "filterWithdraw": "السحوبات",
+
+  
+
+    "withdrawRecord": "سحب نقدي",
+
+  "title": "الصندوق الرئيسي",
+  "historyTitle": "سجل الصندوق الرئيسي",
+  "dailyIncome": "دخل اليوم",
+  "monthlyIncome": "دخل هذا الشهر",
+  "filterDay": "اليوم",
+  "filterWeek": "هذا الأسبوع",
+  "filterMonth": "هذا الشهر",
+  "filterAll": "الكل",
+  "cash": "النقد",
+  "income": "إيراد",
+  "expense": "مصروف",
+  "exportCSV": "تصدير CSV",
+  "resetHistory": "مسح السجل",
+  "homeCashBoxReset": "إعادة ضبط الصندوق الرئيسي",
+  "resetMonthly": "إعادة ضبط شهرية (نهاية الشهر)",
+  "resetManual": "إعادة ضبط يدوية",
+  "homeCashBoxResetTime": "وقت إعادة ضبط الصندوق الرئيسي",
+  "monthlyResetRecord": "إعادة ضبط شهرية",
+  "manualResetRecord": "إعادة ضبط يدوية",
+  "dailyCashNote": "النقد اليومي من الصيدلية",
+
+   "addMoney": "إضافة مبلغ",
+  "enterAmount": "أدخل المبلغ",
+  "cancel": "إلغاء",
+  "add": "إضافة",
+  "manualInputRecord": "إضافة مبلغ يدوياً ",
+  "payToSupplier": "دفع للمورد {{name}}",
+
+
+  
+  "paymentSource": "مصدر الدفع",
+  "homeFirst": "الصندوق الرئيسي أولاً",
+  "pharmacyFirst": "صندوق الصيدلية أولاً",
+  "insufficientFunds": "لا يوجد مال كافٍ"
+},
+"returns": {
+  "refundCashOnly": "سيتم إرجاع المبلغ نقداً فقط",
+"refundMethod": "طريقة الإرجاع",
+"customerName": "اسم الزبون",
+
+  "reason": "سبب الإرجاع",
+  "selectReason": "اختر السبب",
+  "expired": "منتهي الصلاحية",
+  "damaged": "تالف",
+  "wrongItem": "عنصر خاطئ",
+  "other": "أخرى",
+  "enterReason": "أدخل السبب",
+  "maxReturnable": "الكمية المتاحة للإرجاع",
+  "mustSelectQty": "يجب اختيار كمية واحدة على الأقل",
+   "loading": "جاري تحميل بيانات الإرجاع...",
+    "returnForInvoice": "إرجاع للفاتورة",
+    "batch": "الدفعة",
+    "soldQty": "الكمية المباعة",
+    "price": "السعر",
+    "refundSummary": "ملخص المبلغ المسترد",
+    "submitReturn": "تنفيذ الإرجاع",
+    "processing": "جاري المعالجة...",
+    "success": "تم تنفيذ الإرجاع بنجاح",
+    "errorProcessing": "حدث خطأ أثناء تنفيذ الإرجاع",
+ "paymentMethod":" طريقة الدفع",
+  "selectCustomerToReturn": "اختر الزبون للإرجاع",
+  "sale": "فاتورة",
+  "items": "عدد المواد",
+  "total": "الإجمالي",
+  "customer": "الزبون",
+  "cashSale": "بيع نقدي",
+  "debtSale": "بيع آجل",
+  "product": "المادة",
+  "date": "التاريخ",
+
+  "returnItems": "إرجاع مواد",
+  "customerReturn": "إرجاع زبون",
+  "returnQty": "كمية الإرجاع",
+  "refundAmount": "قيمة الإرجاع",
+  "totalRefund": "إجمالي الإرجاع",
+  "confirmReturn": "تأكيد الإرجاع",
+
+  "scanToReturn": "مسح للإرجاع",
+  "scanPrompt": "امسح باركود المنتج",
+  "noProductFound": "لم يتم العثور على منتج بهذا الباركود",
+  "noSaleFound": "لا يوجد بيع لهذا المنتج"
+},
+"cashbox.closeBox": "إغلاق صندوق الصيدلية",
+"cashbox.closeBoxConfirm": "هل أنت متأكد أنك تريد إغلاق صندوق الصيدلية؟",
+"cashbox.closedManually": "إغلاق يدوي",
+"cashbox.closedOnSignout": "إغلاق عند تسجيل الخروج",
+"cashbox.autoReset": "إعادة التعيين اليومية تلقائيًا الساعة 11:59 مساءً",
+"cashbox.autoResetDescription": "عند التفعيل، سيتم إغلاق صندوق الصيدلية تلقائيًا كل يوم الساعة 11:59 مساءً وتحويل الرصيد إلى صندوق المنزل.",
+"license": {
+  "activated": "✓ مُفَعَّل",
+  "trial_days_left": "⏳ {{days}} يوم متبقٍ"
+},
+"viewer": {
+  "back": "رجوع",
+    "accessDenied": "غير مسموح — خاص بالمدير فقط",
+    "search": "بحث",
+    "nameSearch": "بحث بالاسم",
+    "scanBarcode": "مسح الباركود",
+    "scanPrompt": "قم بمسح الباركود الآن:",
+    "addProduct": "إضافة منتج",
+
+    "columns": {
+      "id": "الرقم",
+      "nameAr": "الاسم العربي",
+      "nameEn": "الاسم الإنجليزي",
+      "company": "الشركة",
+      "form": "الشكل",
+      "purchasePrice": "سعر الشراء",
+      "salePrice": "سعر البيع",
+      "barcodes": "الباركودات",
+      "indications": "الاستطبابات",
+      "antidotes": "الترياقات",
+      "dosage": "الجرعة",
+      "fact": "معلومة"
+    },
+
+    "filters": {
+      "companyAll": "كل الشركات",
+      "formAll": "كل الأشكال",
+      "minPrice": "أقل سعر",
+      "maxPrice": "أعلى سعر",
+
+      "companySearch": "بحث عن شركة",
+      "formSearch": "بحث عن شكل",
+
+      "barcode": {
+        "all": "الكل",
+        "single": "باركود واحد",
+        "multi": "عدة باركودات"
+      }
+    },
+
+    "edit": "تعديل",
+    "delete": "حذف",
+
+    "prev": "السابق",
+    "next": "التالي",
+    "page": "صفحة",
+    "of": "من"
+  },
+
+  "modal": {
+    "editTitle": "تعديل المنتج",
+    "cancel": "إلغاء",
+    "save": "حفظ"
+  },
+    "confirm.delete": "هل أنت متأكد أنك تريد الحذف؟"
+
+}

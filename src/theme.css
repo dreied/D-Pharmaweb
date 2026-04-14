@@ -1,0 +1,131 @@
+/* ============================================
+   MATERIAL YOU THEME SYSTEM (LIGHT MODE ONLY)
+   ============================================ */
+
+/* DEFAULT THEME = BLUE */
+:root {
+  --on-tertiary: #f6f9ff;
+  --on-surface: #2c3437;
+  --tertiary-container: #64b5f6;
+  --tertiary-fixed-dim: #54a7e7;
+  --outline: #747c80;
+  --on-tertiary-fixed-variant: #003a5c;
+  --primary: #006789;
+  --on-primary-fixed-variant: #004f6a;
+  --error: #a83836;
+  --on-error: #fff7f6;
+  --secondary-fixed: #94f2ef;
+  --secondary-fixed-dim: #86e4e1;
+  --on-secondary-fixed: #004746;
+  --surface-container-low: #f0f4f7;
+  --surface-variant: #dce4e8;
+  --surface-tint: #006789;
+  --surface-container-lowest: #ffffff;
+  --primary-fixed-dim: #69c3ef;
+  --on-tertiary-fixed: #001627;
+  --inverse-primary: #78d1fe;
+  --surface-bright: #f7f9fb;
+  --tertiary-dim: #005787;
+  --surface-dim: #d4dbdf;
+  --on-secondary: #e1fffd;
+  --surface-container: #eaeff2;
+  --tertiary: #006499;
+  --on-background: #2c3437;
+  --primary-dim: #005a78;
+  --secondary: #006b68;
+  --primary-container: #78d1fe;
+  --surface-container-highest: #dce4e8;
+  --on-error-container: #6e0a12;
+  --on-secondary-fixed-variant: #006764;
+  --outline-variant: #acb3b7;
+  --surface: #f7f9fb;
+  --on-surface-variant: #596064;
+  --primary-fixed: #78d1fe;
+  --on-primary-fixed: #003042;
+  --inverse-surface: #0b0f10;
+  --secondary-container: #94f2ef;
+  --on-primary-container: #00465e;
+  --background: #f7f9fb;
+  --on-primary: #f4faff;
+  --on-secondary-container: #005c5a;
+  --on-tertiary-container: #00314f;
+  --tertiary-fixed: #64b5f6;
+  --error-container: #fa746f;
+  --secondary-dim: #005d5b;
+  --surface-container-high: #e3e9ed;
+  --inverse-on-surface: #9a9d9f;
+  --error-dim: #67040d;
+}
+
+/* ============================================
+   EMERALD THEME (LIGHT MODE)
+   ============================================ */
+
+.theme-emerald {
+  /* ============================
+     PRIMARY — Emerald
+     ============================ */
+  --primary: #059669;              /* Emerald green */
+  --on-primary: #ffffff;           /* White text for contrast */
+  --primary-container: #a7f3d0;    /* Mint container */
+  --on-primary-container: #064e3b; /* Dark teal for readability */
+
+  --primary-fixed: #a7f3d0;
+  --primary-fixed-dim: #6ee7b7;
+  --on-primary-fixed: #064e3b;
+  --on-primary-fixed-variant: #064e3b;
+
+  /* ============================
+     SECONDARY — Teal */
+  --secondary: #0d9488;
+  --on-secondary: #ffffff;
+  --secondary-container: #99f6e4;
+  --on-secondary-container: #053c37; /* Darker teal for stronger contrast */
+
+  --secondary-fixed: #99f6e4;
+  --secondary-fixed-dim: #5eead4;
+  --on-secondary-fixed: #053c37;
+  --on-secondary-fixed-variant: #053c37;
+
+  /* ============================
+     TERTIARY — Mint */
+  --tertiary: #10b981;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #d1fae5;
+  --on-tertiary-container: #064e3b; /* Dark teal for consistency */
+
+  --tertiary-fixed: #d1fae5;
+  --tertiary-fixed-dim: #86efac;
+  --on-tertiary-fixed: #064e3b;
+  --on-tertiary-fixed-variant: #064e3b;
+
+  /* ============================
+     SURFACES — Emerald Neutral */
+  --surface: #f3faf6;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #ecfdf5;
+  --surface-container: #d1fae5;
+  --surface-container-high: #bbf7d0;
+  --surface-container-highest: #a7f3d0;
+
+  --surface-variant: #d1e7dd;
+  --surface-tint: var(--primary);
+
+  --background: #f6fef9;
+  --on-background: #1a2b24;        /* Slightly darker for readability */
+
+  --on-surface: #1a2b24;           /* Darker than before */
+  --on-surface-variant: #3f4d47;   /* More contrast than #4f5d57 */
+
+  /* ============================
+     OUTLINE */
+  --outline: #5a6a63;              /* Darker outline */
+  --outline-variant: #8fa59d;      /* Softer variant */
+
+  /* ============================
+     ERROR */
+  --error: #b91c1c;                /* Stronger red for visibility */
+  --on-error: #ffffff;
+  --error-container: #fecaca;      /* Light red container */
+  --on-error-container: #7f1d1d;   /* Dark red text */
+}

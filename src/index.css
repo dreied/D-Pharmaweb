@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Material Symbols (Google Icons) */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px; /* adjust size if needed */
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* variation settings */
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+/* Force Material Symbols to NOT use Rubik as fallback */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+}
+
+
+/* Global body styling */
+body {
+  font-family: Inter, system-ui, sans-serif;
+  background-color: #f7f9fb;
+}
+/* Reusable input style for forms */
+@layer components {
+  .input {
+    @apply w-full px-3 py-2 rounded-lg bg-surface-container-lowest border border-slate-300;
+  }
+}
+
+/* Extra padding when an icon is inside the input */
+.input-icon-right {
+  padding-right: 3rem !important;
+}
+
+.input-icon-left {
+  padding-left: 3rem !important;
+}
+
+
+/* ⭐ REMOVE NUMBER INPUT ARROWS (GLOBAL) ⭐ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  #print-invoice,
+  #print-invoice * {
+    visibility: visible !important;
+  }
+
+  #print-invoice {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px;
+    background: white;
+  }
+}
+.icon-btn {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--outline-variant);
+  background: var(--surface-container-low);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  background: var(--surface-container);
+}
+/* Prevent Tailwind base font stack from leaking into React-PDF */
+html, body, * {
+  font-family: inherit !important;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 48; /* ← THIS is the important one */
+}
+.fa-brands {
+  font-family: "Font Awesome 6 Brands" !important;
+}

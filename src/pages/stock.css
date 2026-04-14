@@ -1,0 +1,43 @@
+/* Glass effect for cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+}
+
+/* Locator grid used in hover popup */
+.locator-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1px;
+}
+
+/* Optional smooth hover transitions */
+.hover-smooth {
+  transition: all 0.2s ease;
+}
+
+/* Sticky table header */
+table thead {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: #fff; /* solid */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.dark table thead {
+  background-color: #0f172a; /* solid dark */
+}
+
+
+
+/* Optional: background class if you prefer CSS instead of inline style */
+.stock-background {
+  background-image: url("https://lh3.googleusercontent.com/aida/ADBb0ujLYojHEjydZYVzSVNNO0Bi-kN4uHVroONn8Ef72YNbY8m0ej4H-TzrrdkFw9Z7SdMQS6xMnFd2cFMQKjy7WcpODB0MDE_SRprCaeAr78j7i84y0-nquF2yb3Q3P-gJyc3mnc4276INO2IEs90sAa20HVsc1tfosLhCqFTF7iB3Jxd7VxIDXltcOp3xIl13HoU5GLOhJ6o1U5IyztRHLu14lVT1Zuv53TxAaj5uJx10ZEXAOCnIIddSMP0JgB4E5flJSRDxKMGO");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.1;
+  pointer-events: none;
+}

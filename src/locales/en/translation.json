@@ -1,0 +1,997 @@
+{
+"back": "Back",
+"delete": "Delete",
+    "deleteBatchConfirm": "Are you sure you want to delete this batch?",
+    "deleteProduct": "Delete Product",
+    "deleteProductConfirm": "This will delete the product and all its batches.",
+    "edit": "Edit",
+    "editBatch": "Edit Batch",
+    "editProduct": "Edit Product",
+     "saveChanges": "Save Changes",
+    "saveProduct": "Save Product",
+    "saveSuccess": "Product saved successfully",
+    "saved": "Saved successfully",
+"confirm":"Confirm",
+"cancel": "Cancel",
+"confirmSaveProduct":"Are you sure you want to Save Product?",
+
+"confirmSaveBatch":"هل أنت متأكد أنك تريد حفظ التعديلات؟",
+
+  "app": {
+    "title": "D-Pharma"
+  },
+
+  "nav": {
+    "history": "History",
+  "salesHistory": "Sales History",
+  "returnHistory": "Return History",
+    "dashboard": "Dashboard",
+    "debtBook": "Debt Book",
+    "logout": "Logout",
+    "pos": "Point of Sale",
+    "security": "Security",
+    "settings": "Settings",
+    "suppliers": "Suppliers"
+  },
+
+  "stock": {
+    "batch": "Batch",
+  "expiry": "Expiry",
+  "qty": "Quantity",
+  "price": "Price",
+    "total":"Total",
+    "addCategory": "Add New Category",
+      "hideStorage":"Hide Storage Section",
+"showStorage":"Show Storage Section",
+    "addNewItem": "Add New Item",
+    "alternativesFor": "Showing alternatives for {{name}} (Form: {{form}})",
+    "batches": "Batches",
+    "batchId": "Batch ID",
+    "barcode": "Barcode",
+    "cabinet": "Cabinet",
+    "category": "Category",
+    "columns": {
+      "actions": "Actions",
+      "batch": "Batch",
+      "expiry": "Expiry",
+      "location": "Location",
+      "name": "Name",
+      "qty": "Qty"
+    },
+    "export": "Export",
+    "expired": "Expired",
+    "expiredItems": "Expired items",
+    "expiredLabel": "Expired",
+    "expiryDate": "Expiry Date",
+    "filter": "Filter",
+    "filters": {
+      "all": "All Products",
+      "inStock": "In Stock",
+      "lowStock": "Low Stock",
+      "outOfStock": "Out of Stock"
+    },
+    "form": "Form",
+    "inStock": "In Stock",
+    "isAccessory": "Is Accessory",
+    "location": "Location",
+    "lowStock": "Low Stock",
+    "minQty": "Minimum Quantity",
+    "nameAr": "Name (Arabic)",
+    "nameEn": "Name (English)",
+    "noResults": "No results found.",
+    "outOfStock": "Out of Stock",
+    "pagination": {
+      "showing": "Showing {{from}}–{{to}} of {{total}} items"
+    },
+    "purchasePrice": "Purchase Price",
+    "quantity": "Quantity",
+    "row": "Row",
+    "salePrice": "Sale Price",
+    "scanOrAdd": "scan to add new Medicine",
+    "searchPlaceholder": "Search by name or barcode...",
+    "searchUniversal": "Search universal medicine database...",
+    "selectCategory": "Select Category",
+    "shelf": "Shelf",
+    "stats": {
+      "almostExpired": "Almost expired",
+      "almostExpiredItems": "Almost expired items",
+      "criticalItems": "Critical Items",
+      "expired": "Expired",
+      "expiredItems": "Expired items",
+      "lowStock": "Low Stock",
+      "lowStockAlerts": "Low Stock Alerts",
+      "outOfStock": "Out of Stock",
+      "salesToday": "Sales Today",
+      "totalInventory": "Total Inventory",
+      
+    "updated": "Updated {{time}}"
+    },
+    "storage": "Storage Details",
+    "subtitle": "Track inventory, batches, expiry dates, and pricing.",
+    "title": "Stock Management",
+    "totalValue": "Total Value",
+    "unknownName": "Unknown Name"
+  },
+"backup": {
+  "enterPasswordToRestore": "Enter your password to restore the backup",
+  "enterPasswordToEncrypt": "Enter a password to encrypt the backup",
+
+  "restored": "Backup restored successfully",
+  "restoreFailed": "Backup restore failed",
+
+  "failed": "Backup failed",
+  "saved": "Backup saved successfully"
+},
+  "settings": {
+     
+  "appVersion": "App Version",
+  "developerName": "Developer Name",
+  "email": "Email",
+  "contactWhatsapp": "Contact via WhatsApp",
+    "disabled":"Disabled",
+    "enabled":"Enabled",
+    "cashBoxReset": "Cashbox Reset Options",
+"resetDaily": "Reset Daily",
+"reset12Hours": "Reset Every 12 Hours",
+"resetWeekly": "Reset Weekly",
+"resetManual": "Manual Reset",
+
+    "removeLogo":"Remove Logo",
+    "backup": {
+      "chooseFile": "Choose file",
+    "noFileChosen": "No file chosen",
+      "verifyOK": "Backup is valid",
+    "verifyFailed": "Backup verification failed",
+    "invalidEncrypted": "This file is not a valid encrypted backup",
+      "enterPasswordToRestore": "Enter your password to restore the backup",
+  "enterPasswordToEncrypt": "Enter a password to encrypt the backup",
+
+      "delete": "Delete",
+      "saveInsideFolder": "Save backup inside folder",
+"verify": "Verify",
+      "auto": "Automatic Backup",
+      "chooseFolder": "Choose Backup Folder",
+      "cloud": "Cloud Backup",
+      "create": "Create Backup",
+      "createDescription": "Download a full backup of your pharmacy data.",
+      "daily": "Daily",
+      "download": "Download Backup",
+    
+      "failed": "Backup failed.",
+      "folderSelected": "Backup folder selected",
+      "googleDrive": "Backup to Google Drive",
+      "history": "Backup History",
+      "info": "Backup Information",
+      "lastBackup": "Last backup",
+      "manual": "Manual",
+      "noBackupYet": "No backups created yet",
+      "noFolder": "No backup folder selected",
+      "oneDrive": "Backup to OneDrive",
+      "restore": "Restore Backup",
+      "restoreDescription": "Upload a backup file to restore your data.",
+      "restoreError": "Invalid backup file.",
+      "restoreFailed": "Restore failed. Wrong password or corrupted file.",
+      "restoreSuccess": "Backup restored successfully!",
+      "restored": "Backup restored successfully.",
+      "saveZip": "Save ZIP Backup to Folder",
+      "saved": "Backup saved successfully!",
+      "weekly": "Weekly"
+    },
+    "back": "Back",
+    "comingSoon": "More settings coming soon...",
+    "currencySymbol": "Currency Symbol",
+
+    "delete": "Delete",
+    "deleteBatchConfirm": "Are you sure you want to delete this batch?",
+    "deleteProduct": "Delete Product",
+    "deleteProductConfirm": "This will delete the product and all its batches.",
+    "edit": "Edit",
+    "editBatch": "Edit Batch",
+    "editProduct": "Edit Product",
+     "saveChanges": "Save Changes",
+    "saveProduct": "Save Product",
+    "saveSuccess": "Product saved successfully",
+    "saved": "Saved successfully",
+
+    "expireInMonths": "Expires in (months)",
+    "expiryWarningDate": "Expiry warning date",
+    "expiryWarningPeriod": "Expiry warning period",
+    "language": "Language",
+    "months": "months",
+    "newCurrency": "New",
+    "newShort": "NEW",
+    "oldCurrency": "Old",
+    "oldShort": "OLD",
+    "pharmacyLogo": "Pharmacy Logo",
+    "pharmacyName": "Pharmacy Details",
+    "productDetails": "Product Details",
+    "tabs": {
+      "about": "About",
+      "backup": "Backup",
+      "general": "General",
+      "inventory": "Inventory",
+      "pos": "POS",
+      "activation": "Activation"
+
+    },
+    "theme": "Theme",
+    "themeBlue": "Blue theme",
+    "themeGreen": "Green theme",
+    "title": "Settings",
+    "update": {
+"universalViewer": {
+      "title": "Universal Database Viewer",
+      "description": "View, search, filter, and edit all 20,203 products in the universal database.",
+      "openButton": "Open Viewer"
+    },
+
+      "check": "Check for Updates",
+      "current": "Current version",
+      "description": "Check for new universal pharmacy data updates.",
+      "download": "Download Update",
+      "latest": "Latest version",
+      "title": "Database Update"
+    },
+    "useNewCurrency": "Use New Currency"
+  },
+
+  "pos": {
+    "PreviewReceipt":"Preview Receipt",
+    "debtPartialPaid":"Partial Paid ",
+  "items": "Items",
+    "item": "Item",
+    "qty": "Qty",
+    "printInvoice": "Print Invoice",
+    "invoice": "Invoice",
+    "product":"Product",
+    "actions": "Actions",
+    "unitType": "Unit Type",
+  "envelope": "Envelope",
+  "box": "Box",
+  "envelopesInside": "Envelopes inside the box",
+    "addCustomer": "Add Customer",
+    "addToDebt": "Add to Debt",
+    "barcodeNotFound": "Barcode not found",
+    "card": "Card",
+    "cash": "Cash",
+    "cancel": "Cancel",
+    "checkout": "Checkout",
+    "clearCart": "Clear Cart",
+    "clearFilters": "Clear filters",
+    "close": "Close",
+    "completeSale": "Complete Sale",
+    "confirmSale": "Confirm Sale",
+    "currentSale": "Current Sale",
+    "customer": "Customer",
+    "customerDebtBook": "Customer (Debt Book)",
+    "date": "Date",
+    "debt": "Debt",
+    "debtLimitNote": "* Debt limit for this customer: {{limit}}",
+    "discount": "Discount",
+    "emptyCart": "Your cart is empty",
+    "invoiceId": "Invoice ID",
+    "itemsInBasket": "{{count}} items in basket",
+    "location": "Location",
+    "noCustomer": "No Customer",
+    "noSalesFound": "No sales found",
+    "paymentMethod": "Payment Method",
+    "price": "Price",
+    "printReceipt": "Print Receipt",
+    "quantity": "Quantity",
+    "saleCompleted": "Sale Completed",
+    "salesHistory": "Sales History",
+    "searchInvoice": "Search by invoice number,customer name or medicine name",
+    "searchPlaceholder": "Search Medicine or scan barcode...",
+    "selectCustomer": "Select Customer...",
+    "showOnMap": "Show on Map",
+    "subtotal": "Subtotal",
+    "tax": "Tax ({{rate}}%)",
+    "taxPercent": "Tax (%)",
+    "title": "Point of Sale",
+    "total": "Total",
+    "totalAmount": "Total Amount",
+    "transactionSummary": "Transaction Summary",
+    "cashBox":"Pharmacy Cash Box",
+    "walkInCustomer": "Walk-in customer"
+  },
+"cashbox": {
+   "defaultNote": "Cashbox update",
+    "closedManually": "Cashbox closed manually",
+    "closedOnSignout": "Cashbox closed on signout",
+  "customerPaymentNote": "Paid by {{name}} to settle debt",
+  "homeWithdrawError": "You cannot withdraw more than the current balance. Your current balance is {{balance}}",
+
+  "withdrawError": "You cannot withdraw more than the current balance. Your current balance is {{balance}}",
+
+"currentBalance": "Current Balance",
+"currentBalanceSubtitle": "Total cash available now",
+"dailyProfitSubtitle": "Profit generated today",
+"monthlyProfitSubtitle": "Profit generated this month",
+  "withdraw": "Withdraw",
+
+
+  "enterAmount": "Enter amount",
+  "enterReason": "Enter reason",
+  "cancel": "Cancel",
+
+  
+  "filterWithdraw": "Withdrawals",
+
+    
+  "filterSupplierPayments": "Supplier Payments",
+  "filterSales": "Sales",
+  "filterManualInputs": "Manual Inputs",
+  "filterResets": "Resets",
+  "filterDailyCash": "Daily Cash",
+
+  
+  "supplierPaymentRecord": "Supplier Payment",
+  "dailyCashRecord": "Daily Cash Transfer",
+  "resetRecord": "Reset",
+  "monthlyResetRecord": "Monthly Reset",
+  "manualResetRecord": "Manual Reset",
+"withdrawRecord": "Withdrawal",
+
+ 
+  "manualInputRecord": "Manual input",
+  "saleRecord": "Sale",
+  "income": "Income",
+    "historyTitle": "Cashbox History",
+    "filterDay": "Today",
+    "filterWeek": "This Week",
+    "filterMonth": "This Month",
+    "filterAll": "All",
+    "exportCSV": "Export CSV",
+    "noHistory": "No history available",
+    "chartIncome": "Income",
+    "dailyProfit": "Daily Profit",
+    "monthlyProfit": "Monthly Profit",
+    "cash": "Cash in Box",
+"profit": "Profit"
+
+},
+  "debtBook": {
+     "printTitle": "Customer Debt Report",
+  "printAll": "Print all customers",
+  "exportPDF": "Export PDF",
+  "exportExcel": "Export Excel",
+  "kindPurchase": "Purchase",
+  "kindPayment": "Payment",
+  "kind": "Type",
+  "date": "Date",
+  
+"deleteCustomerTitle": "Delete Customer",
+  
+  "cannotDeleteHasDebt": "This customer cannot be deleted because they still have outstanding debt.",
+  "confirmDelete": "Are you sure you want to delete {{name}}?",
+
+    "addCustomer": "Add New Customer",
+    "amount": "Amount",
+    "cancel": "Cancel",
+    "cards": {
+      "criticalArrears": {
+        "description": "{{count}} customers have debts older than 30 days",
+        "title": "Critical Arrears"
+      },
+      "debtForecast": {
+        "description": "Projected debt trend based on recent activity",
+        "footer": "Analytics",
+        "title": "Debt Forecast"
+      },
+      "recentSettlements": {
+        "description": "Track recent payments and cleared balances",
+        "title": "Recent Settlements"
+      }
+    },
+    "columns": {
+      "actions": "Actions",
+      "customer": "Customer",
+      "lastPurchase": "Last Purchase",
+      "paymentHistory": "Payment History",
+      "totalDebt": "Total Debt"
+    },
+    "confirm": "Confirm",
+    "customer": "Customer",
+    "enterAmount": "Enter amount paid",
+    "enterPastDebt": "Enter past debt (optional)",
+    "idLabel": "ID",
+    "lastPurchase": "Last Purchase",
+    "noCustomers": "No customers found",
+    "noPurchases": "No purchases",
+    "pageSubtitle": "Track outstanding balances and customer credit activity",
+    "pageTitle": "Debt Book",
+    "paymentHistory": "Payment History",
+    "settlePayment": "Settle Payment",
+    "showingRange": "Showing {{start}}–{{end}} of {{total}} customers",
+    "status": {
+      "noPurchases": "No Purchases",
+      "over15": "15 Days Overdue",
+      "over30": "30+ Days Overdue",
+      "withinTerm": "Within Term"
+    },
+    "subtitle": "Overview of all customers with outstanding balances",
+    "title": "Customer Debts",
+    "totalDebt": "Total Debt",
+    "totalDebtFor": "Total outstanding debt for",
+    "totalOutstanding": "Total Outstanding Debt",
+    "vsLastMonth": "vs last month"
+  },
+
+  "common": {
+    "delete": "Delete",
+    "add": "Add",
+    "cancel": "Cancel",
+    "collapse": "Collapse",
+    "confirm": "Confirm",
+    "expand": "Expand",
+    "search": "Search",
+    "actions": "Actions",
+    "edit": "Edit"
+  },
+
+  "customer": {
+    
+  "currentBalance": "Current balance",
+  "balanceTimeline":"Balance Time line",
+  "pastBalance": "Past Balance",
+
+  "paidDuringSales": "Paid During Sale",
+  
+ 
+
+
+  "noItems": "No items",
+ 
+
+
+  "sale": "Sale",
+ 
+  "paid_during_sale": "Paid During Sale",
+  "totalPaid": "Total Paid",
+  "totalRefundCost": "Total Refund Cost",
+  "extraRefund": "Extra Refund",
+ 
+  "extra_refund": "Extra Refund",
+ 
+    "return": "Return",
+    "details": "Customer Details",
+    "initialDebt": "Initial Debt",
+    "name": "Customer Name",
+    "noPayments": "No payments found",
+    "noPurchases": "No purchases found",
+    "payment": "Payment",
+    "payments": "Payments",
+    "phone": "Phone Number",
+    "purchases": "Purchases",
+
+   
+    "financialSummary": "Financial Summary",
+    "totalPurchases": "Total Purchases",
+    "totalPayments": "Total Payments",
+    "remainingBalance": "Remaining Balance"
+ 
+  },
+
+  "sort": {
+    "debt": "Sort by Debt",
+    "lastPurchase": "Sort by Last Purchase",
+    "name": "Sort by Name"
+  },
+   "notifications": {
+    "noNotifications": "No notifications",
+
+    "expired": "Product {{name}} is expired",
+    "nearExpiry": "Product {{name}} is near expiry",
+    "outOfStock": "Product {{name}} is out of stock",
+    "lowStock": "Product {{name}} has low stock",
+
+    "highDebt": "Customer {{name}} has high debt",
+    "overdueCustomer": "Customer {{name}} has overdue debt",
+
+    "updateAvailable": "A new update is available",
+    "updateDatabase": "A database update is available",
+
+    "groups": {
+      "stock": "Stock Alerts",
+      "expiry": "Expiry Alerts",
+      "customers": "Customer Alerts",
+      "system": "System Alerts"
+    }
+  },
+  "profile": {
+   
+    "oldPassword": "Old Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "save": "Save",
+    "wrongOldPassword": "The old password is incorrect",
+    "passwordMismatch": "Passwords do not match",
+    "passwordUpdated": "Password updated successfully",
+  "role": "Role",
+  "changePassword": "Change Password",
+  "securitySettings": "Security Settings",
+   "title": "Profile",
+  "preferences": "Preferences",
+  "security": "Security"
+},
+"logout": "Logout",
+  "security": {
+    "title":"Security",
+    "adminOnly": "Only administrators can modify security settings.",
+    "backupPassword": {
+      "title":" Backup Password",
+      "adminOnly": "Only administrators can change the backup password.",
+      "change": "Change Password",
+      "changeTitle": "Change Backup Password",
+      "changed": "Backup password changed successfully.",
+      "confirm": "Confirm Password",
+      "invalidOld": "Old password is incorrect.",
+      "mismatch": "Passwords do not match.",
+      "new": "New Password",
+      "old": "Old Password",
+      "set": "Set Password",
+      "setSuccess": "Backup password set successfully.",
+      "setTitle": "Set Backup Password"
+    },
+    "login": {
+      "button": "Sign in",
+      "defaultHint": "Default admin: username \"admin\", password \"admin123\". Please change it in the Security tab.",
+      "genericError": "Login failed. Please try again.",
+      "invalidPassword": "Incorrect password.",
+      "password": "Password",
+      "subtitle": "Enter your credentials to access the system.",
+      "title": "Sign in",
+      "userNotFound": "User not found.",
+      "username": "Username"
+    },
+     "users":{"title": "Security"}
+    
+  },
+  "users": {
+    "back": "Back",
+    "manageUsers": "Manage Users",
+    "addUser": "Add User",
+    "username": "Username",
+    "password": "Password",
+    "role": "Role",
+    "roleUser": "User",
+    "roleAdmin": "Admin",
+    "add": "Add",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirmDelete": "Confirm Delete",
+    "deleteUserPrompt": "Are you sure you want to delete",
+    "accessDenied": "Access denied",
+    "cannotDeleteSelf": "You cannot delete your own account",
+    "changeUsername": "Change Username",
+    "changeRole": "Change Role",
+    "updateRole": "Update Role",
+    "resetPassword": "Reset Password",
+    "newPassword": "New Password",
+    "confirmNewPassword": "Confirm New Password",
+    "reset": "Reset",
+    "passwordMismatch": "Passwords do not match",
+    "passwordResetSuccess": "Password reset successfully",
+    "search": "Search users...",
+    "filterRole": "Filter by role",
+    "allRoles": "All roles"
+  },
+"supplier": {
+ "print": "Print",
+  "exportPdf": "Export PDF",
+    "searchReturnInvoice": "Search return invoice",
+    "clearFilters": "Clear filters",
+    "noReturnsFound": "No returns found",
+    "returnId": "Return ID",
+  
+    "actions": "Actions",
+    "viewItems": "View Items",
+    
+  "returnSuccess": "Supplier return completed successfully.",
+    "returnError": "An error occurred while processing the supplier return.",
+  "validation_noReturnQty": "Please enter a return quantity for at least one product.",
+  "returnNotEnoughCash": "⚠️ Not enough cash available.\nMissing amount {{missing}} was deducted from the supplier balance.",
+    "returnDefaultNote": "Supplier return refund",
+  "returnHistoryTitle": "Supplier Return History",
+  "returnDate": "Date",
+  "returnSupplier": "Supplier",
+  "returnAmount": "Amount",
+  "returnedItems": "Returned Items",
+  "product": "Product",
+  "qty": "Quantity",
+  "amount": "Amount",
+  "unknownSupplier": "Unknown Supplier",
+  "expiry":"Expiry Date",
+  "returnTitle": "Return items to supplier",
+  "returnButton": "Return to supplier",
+  "returnScanButton": "Scan to return",
+  "returnSelectSupplier": "Select supplier",
+  "returnItems": "Items to return",
+  "returnQuantity": "Return quantity",
+  "returnReason": "Reason",
+  "returnReason_nearExpiry": "Near expiry",
+  "returnReason_expired": "Expired",
+  "returnReason_damaged": "Damaged",
+  "returnReason_wrongItem": "Wrong item",
+  "returnReason_other": "Other",
+  "returnReason_otherPlaceholder": "Enter reason",
+  "refundMethod": "Refund method",
+  "refundMethod_cash": "Cash refund",
+  "refundMethod_credit": "Keep as credit",
+  "refundMethod_exchange": "Use for new items",
+  "totalRefund": "Total refund",
+  "confirmReturn": "Confirm return",
+  "cancel": "Cancel",
+  "validation_selectSupplier": "Please select a supplier",
+  "validation_noItems": "Please select at least one item to return",
+  "validation_invalidQuantity": "Return quantity must be greater than 0 and not exceed stock quantity",
+  "returnNote": "Returned items to supplier {{name}}",
+  "returnReasonNote": "Reason: {{reason}}",
+  "returnCompleted": "Supplier return completed successfully"
+},
+
+"suppliers": {
+ "returnToSupplier": "Return to supplier",
+  "scanToReturn": "Scan to return",
+  "scanBarcode": "Scan barcode:",
+  "returnFromThisInvoice": "Return from this invoice",
+  "purchaseId": "Purchase ID",
+
+  "purchaseHistory": "Purchase History",
+  "noPurchases": "No purchases recorded",
+  
+  "amountPaid": "Amount Paid",
+  
+  "items": "Items",
+  "method_return": "Return from supplier",
+  "validation_selectSupplier": "Please select a supplier",
+  "validation_noItems": "Please select at least one item to return",
+  "validation_invalidQuantity": "Return quantity must be greater than 0 and not exceed stock quantity",
+  "returnNote": "Returned items to supplier {{name}}",
+  "returnReasonNote": "Reason: {{reason}}",
+  "stockSummary":"Input Sale Summary",
+  "addStock":"Add To Stock",
+  "addStockFor":"Add to stock",
+"continueToPayment": "Continue to Payment",
+    "totalStockCost": "Total Input Sale Cost",
+    "product": "Product",
+    "searchProducts": "Search Products",
+    "selectProduct": "Select Product",
+    "quantity": "Quantity",
+    "purchasePrice": "Purchase Price",
+    "expiryDate": "Expiry Date",
+    "batchNumber": "Batch Number",
+    "addItem": "Add Item",
+    "removeItem": "Remove Item",
+    "summary": "Summary",
+    "totalCost": "Total Cost",
+    "confirmAndPay": "Confirm & Pay",
+    "finish": "Finish",
+    "next": "Next",
+    "back": "Back",
+"nextProduct":"Next Product",
+"continueToSummary":"Continue To Summary",
+  "title": "Supplier Accounts",
+  "searchPlaceholder": "Search suppliers...",
+  "placeholderIntro": "This page will show supplier balances, payment status, and recent transactions.",
+
+  "accountsPayable": "Accounts Payable",
+  "totalOutstanding": "Total Outstanding Balance",
+  "totalOutstandingDescription": "Currently managing {{count}} primary pharmaceutical suppliers with {{pending}} payments pending approval.",
+  "nextPaymentDue": "Next Payment Due",
+  "noUpcomingPayment": "No upcoming payments",
+  "processBatch": "Process Batch",
+
+  "totalOwed": "Total Owed",
+  "status": {
+    "active": "ACTIVE",
+    "overdue": "OVERDUE",
+    "inactive": "INACTIVE"
+  },
+  
+  "viewStatement": "View Statement",
+  "makePayment": "Make Payment",
+  "addSupplier": "Add New Supplier",
+
+  "recentPayments": "Recent Payments",
+  "paymentTo": "Payment to {{name}}",
+  "transactionId": "Transaction ID: {{id}} • {{timeAgo}}",
+
+  "transactionHub": "Transaction Hub",
+  "paymentType": "Payment Type",
+  "payAll": "Pay All",
+  "partial": "Partial",
+  "amountToPay": "Amount to Pay",
+  "remainingBalance": "Remaining Balance",
+  "confirmTransaction": "Confirm Transaction",
+
+  "editSupplier": "Edit Supplier",
+  "deleteSupplier": "Delete Supplier",
+  "deleteConfirm": "Are you sure you want to delete {{name}}?",
+  "delete": "Delete",
+  "cancel": "Cancel",
+  "save": "Save",
+  "viewDetails": "View Details",
+  "currentBalance": "Current Balance",
+  "totalPaid": "Total Paid",
+  "outstanding": "Outstanding",
+  "outstandingInvoices": "Outstanding Invoices",
+  "noOutstanding": "No outstanding invoices",
+  "paymentHistory": "Payment History",
+  "noPayments": "No payments recorded",
+  "date": "Date",
+  "amount": "Amount",
+  "method": "Method",
+  "note": "Note",
+  "monthlyPayments": "Monthly Payments",
+  "contactInfo": "Contact Information",
+  "phone": "Phone",
+  "notes": "Notes",
+  "name": "Name",
+  "icon": "Icon",
+  "imageUrl": "Image",
+  "pastBalance": "Opening Balance",
+  "net": "Net {{days}} days"
+},
+"supplierStats": {
+  "totalOutstandingBalance": "Total Outstanding Balance",
+  "increase": "{{percent}}% increase",
+  "managingSuppliers": "Currently managing {{count}} suppliers with {{pending}} payments pending approval",
+  "nextPaymentDue": "Next Payment Due",
+  "noUpcomingPayments": "No upcoming payments",
+  "processBatch": "Process Batch"
+},
+"recentPayments": {
+  "title": "Recent Payments",
+  "noRecentPayments": "No recent payments"
+},
+"paymentModal": {
+  "title": "Record Payment",
+  "amount": "Amount",
+  "method": "Payment Method",
+  "note": "Note",
+  "submit": "Submit Payment",
+  "cancel": "Cancel"
+},
+"supplierDetails": {
+  "dashboard": "Supplier Dashboard",
+  "contactInfo": "Contact Information",
+  "outstandingInvoices": "Outstanding Invoices",
+  "monthlyPayments": "Monthly Payments",
+  "paymentHistory": "Payment History",
+  "noInvoices": "No invoices found",
+  "noPayments": "No payments found"
+},
+"buttons": {
+  "edit": "Edit",
+  "delete": "Delete",
+  "save": "Save",
+  "cancel": "Cancel",
+  "close": "Close",
+  "pay": "Pay"
+},
+"common.back":"Back",
+"common.delete":"Delete",
+
+  "activation": {
+   
+    "trialUsed": "Trial Days Used",
+    "trialLeft": "Days Left",
+  
+    "enterCode": "Enter Activation Code",
+
+
+ "title": "D-Pharma Activation",
+  "deactivated_title": "License deactivated",
+  "deactivated_msg": "This license has been deactivated. Please contact support.",
+ 
+  "error_generic": "Activation failed",
+ 
+
+  "select_file": "Select activation file (.txt)",
+
+  "file_invalid": "Invalid activation file",
+  "file_read_error": "Could not read activation file",
+
+    "select_folder": "Select License Folder",
+    "connect_server": "Connect to Server",
+    "send_whatsapp": "Send Device ID via WhatsApp",
+    "device_id": "Device ID",
+    "copy": "Copy",
+    "status": "Status",
+    "trial": "Trial",
+    "activated": "Activated",
+    "expired": "Expired",
+    "no_device_id": "No Device ID",
+    "trial_used": "Trial used",
+    "trial_left": "Trial left",
+    "plan": "Plan",
+    "expires": "Expires",
+    "expired_msg": "Your trial has expired.",
+    "paste_code": "Paste activation code here",
+    "activate": "Activate",
+    "device_loaded": "Device ID loaded successfully",
+    "device_load_failed": "Failed to load device ID",
+    "success": "Activation successful",
+    "no_device": "Please select your license folder first",
+    "server_success": "Activated via server",
+    "server_offline": "Server offline — please use WhatsApp to send Device ID",
+    "whatsapp_message": "Hello, this is my Device ID. Please generate activation code."
+  },
+
+  "homecash": {
+    "amountInvalid": "Please enter a valid amount.",
+    "homeWithdrawError": "You cannot withdraw more than the current balance. Your current balance is {{balance}}",
+  "enterReason": "Enter reason",
+  "withdraw": "Withdraw",
+  "withdrawRecord": "Withdrawal",
+  "saleRecord": "Sale",
+  "supplierPaymentRecord": "Supplier Payment",
+  "dailyCashRecord": "Daily Cash Transfer",
+  "resetRecord": "Reset",
+ 
+  "filterSupplierPayments": "Supplier Payments",
+  "filterSales": "Sales",
+  "filterManualInputs": "Manual Inputs",
+  "filterResets": "Resets",
+  "filterWithdraw": "Withdrawals",
+
+  "title": "Home Cash Box",
+  "historyTitle": "Home Cash Box History",
+  "dailyIncome": "Today income",
+  "monthlyIncome": "This month income",
+  "filterDay": "Today",
+  "filterWeek": "This week",
+  "filterMonth": "This month",
+  "filterAll": "All",
+  "cash": "Cash",
+  "income": "Income",
+  "expense": "Expense",
+  "exportCSV": "Export CSV",
+  "resetHistory": "Reset History",
+  "homeCashBoxReset": "Home Cash Box reset",
+  "resetMonthly": "Monthly reset (end of month)",
+  "resetManual": "Manual reset",
+  "homeCashBoxResetTime": "Home Cash Box reset time",
+  "monthlyResetRecord": "Monthly reset",
+  "manualResetRecord": "Manual reset",
+  "dailyCashNote": "Daily pharmacy cash",
+
+   "addMoney": "Add Money",
+  "enterAmount": "Enter amount",
+  "cancel": "Cancel",
+  "add": "Add",
+  "manualInputRecord": "Manual input",
+  "payToSupplier": "Payment to supplier {{name}}",
+
+  
+  "paymentSource": "Payment Source",
+  "homeFirst": "Home Cash Box first",
+  "pharmacyFirst": "Pharmacy Box first",
+  "insufficientFunds": "Not enough money available"
+},
+"returns": {
+  "refundCashOnly": "Refund will be given in cash only",
+"refundMethod": "Refund method",
+"customerName": "Customer name",
+  "maxReturnable": "Max returnable",
+  "mustSelectQty": "You must select at least one quantity",
+
+  "reason": "Return reason",
+  "selectReason": "Select reason",
+  "expired": "Expired",
+  "damaged": "Damaged",
+  "wrongItem": "Wrong item",
+  "other": "Other",
+  "enterReason": "Enter reason",
+    "loading": "Loading return data...",
+    "returnForInvoice": "Return for Invoice",
+
+    "batch": "Batch",
+    "soldQty": "Sold Quantity",
+    "price": "Price",
+ 
+    "refundSummary": "Refund Summary",
+    
+    "submitReturn": "Submit Return",
+    "processing": "Processing...",
+    "success": "Return processed successfully",
+    "errorProcessing": "An error occurred while processing the return",
+ 
+  "paymentMethod":"Payment Method",
+  "selectCustomerToReturn": "Select which customer to return",
+  "sale": "Sale",
+  "items": "Items",
+  "total": "Total",
+  "customer": "Customer",
+  "cashSale": "Cash Sale",
+  "debtSale": "Debt Sale",
+  "product": "Product",
+  "date": "Date",
+  
+  "returnItems": "Return items",
+  "customerReturn": "Customer return",
+  "returnQty": "Return quantity",
+  "refundAmount": "Refund amount",
+  "totalRefund": "Total refund",
+  "confirmReturn": "Confirm return",
+  "scanToReturn": "Scan to return",
+  "scanPrompt": "Scan the product barcode",
+  "noProductFound": "No product found with this barcode",
+  "noSaleFound": "No sale found for this product"
+},
+"cashbox.closeBox": "Close Pharmacy Cashbox",
+"cashbox.closeBoxConfirm": "Are you sure you want to close the pharmacy cashbox?",
+"cashbox.closedManually": "Closed manually",
+"cashbox.closedOnSignout": "Closed on sign out",
+"cashbox.autoReset": "Automatic daily reset at 11:59 PM",
+"cashbox.autoResetDescription": "When enabled, the pharmacy cashbox will automatically close every day at 11:59 PM and transfer the balance to the Home Cashbox.",
+
+"license": {
+  "activated": "✓ Activated",
+  "trial_days_left": "⏳ {{days}} days left"
+},
+
+
+  "viewer": {
+    "back": "Back",
+    "accessDenied": "Access denied — admin only",
+    "search": "Search",
+    "nameSearch": "Search by name",
+    "scanBarcode": "Scan Barcode",
+    "scanPrompt": "Scan the barcode now:",
+    "addProduct": "Add Product",
+
+    "columns": {
+      "id": "ID",
+      "nameAr": "Arabic Name",
+      "nameEn": "English Name",
+      "company": "Company",
+      "form": "Form",
+      "purchasePrice": "Purchase Price",
+      "salePrice": "Sale Price",
+      "barcodes": "Barcodes",
+      "indications": "Indications",
+      "antidotes": "Antidotes",
+      "dosage": "Dosage",
+      "fact": "Fact"
+    },
+
+    "filters": {
+      "companyAll": "All Companies",
+      "formAll": "All Forms",
+      "minPrice": "Min Price",
+      "maxPrice": "Max Price",
+
+      "companySearch": "Search company",
+      "formSearch": "Search form",
+
+      "barcode": {
+        "all": "All",
+        "single": "Single barcode",
+        "multi": "Multiple barcodes"
+      }
+    },
+
+    "edit": "Edit",
+    "delete": "Delete",
+
+    "prev": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "of": "of"
+  },
+
+  "modal": {
+    "editTitle": "Edit Product",
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  
+    "confirm.delete": "Are you sure you want to delete this item?"
+  
+
+
+
+}

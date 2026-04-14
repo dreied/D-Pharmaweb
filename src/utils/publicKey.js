@@ -1,0 +1,14 @@
+// src/utils/publicKey.js
+
+// TODO: replace with your real RSA/EC public key
+export const PUBLIC_KEY_PEM = `
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6eTpX70jPsHup4+jXhW9
+fklv7zfQbg1NZAhHgYlGohqQ8uZFRC2a65IU566xOJTkLSa3Ncfm8SfCYzdqGbRn
+/yoLmuW4FAy9aNnAOX31E387y//8VySNPLrq8G0w6fI/qbWCmFa1DipeGlfmKfas
+NJG93+FtRSz+6MVavpKtHIZl8LBh8ndg6E6Nwd4OPBTSLlj0BZPgDjmYWBMBrgk9
+l5om4liEiLUFHHCkFd9RinX+bK3cU0sZiqLRRWmoKTcCPf09+2RQvke1sYu3ux0q
+7/IU6Kbq8Ddltx3d7w29QqWgXIw26z6lJvw1oxi9Ij8B+SLfKTpDMcYbqGsIVTzz
+vQIDAQAB
+-----END PUBLIC KEY-----
+`;
