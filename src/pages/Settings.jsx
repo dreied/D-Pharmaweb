@@ -12,6 +12,8 @@ import TopAppBar from "../components/TopAppBar";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import PharmacyLayoutEditor from "../components/layout/PharmacyLayoutEditor";
+
 
 import { ar } from "date-fns/locale";
 import { useAuth } from "../context/AuthContext";
@@ -122,6 +124,7 @@ const [pharmacyPhone, setPharmacyPhone] = useState("");
   const [changes, setChanges] = useState([]);
 const [verifyMessage, setVerifyMessage] = useState(null);
 const [restoreMessage, setRestoreMessage] = useState(null);
+const [showLayoutEditor, setShowLayoutEditor] = useState(false);
 
   /* ============================
      EXPIRY WARNING (NEW SYSTEM)
@@ -890,6 +893,26 @@ return (
               className="text-on-surface"
             />
           </div>
+          {/* LAYOUT EDITOR */}
+<div className="p-6 rounded-3xl bg-surface-container-high shadow-sm space-y-4">
+  <h2 className="text-xl font-bold flex items-center gap-2">
+    <span className="material-symbols-outlined text-primary">map</span>
+    {t("settings.pharmacyLayout")}
+  </h2>
+
+  <p className="text-sm text-on-surface-variant">
+    {t("settings.pharmacyLayoutDescription")}
+  </p>
+
+  <button
+    onClick={() => setShowLayoutEditor(true)}
+    className="px-6 py-2 bg-primary text-on-primary rounded-xl font-bold shadow flex items-center gap-2"
+  >
+    <span className="material-symbols-outlined">edit</span>
+    {t("settings.editLayout")}
+  </button>
+</div>
+
         </div>
       )}
 
@@ -1639,7 +1662,13 @@ return (
   </div>
 )}
 
-   
+   {showLayoutEditor && (
+  <PharmacyLayoutEditor
+    open={showLayoutEditor}
+    onClose={() => setShowLayoutEditor(false)}
+  />
+)}
+
      </main>
     </div>
   </div>

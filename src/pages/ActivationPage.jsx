@@ -13,7 +13,7 @@ import {
   saveFolderHandle,
   loadFolderHandle,
   readDeviceId,
-  tryAutoDetectFolder,
+  pickDeviceFolder,
 } from "../utils/deviceFolder";
 
 const SYNC_KEY = "dpharmacy_last_sync";
@@ -32,7 +32,7 @@ export default function ActivationPage() {
       let handle = await loadFolderHandle();
 
       if (!handle) {
-        const auto = await tryAutoDetectFolder();
+        const auto = await pickDeviceFolder();
         if (auto) {
           handle = auto;
           await saveFolderHandle(auto);
@@ -55,6 +55,14 @@ export default function ActivationPage() {
       setTrialInfo(info);
     })();
   }, []);
+async function ensurePermission(handle) {
+  const opts = { mode: "readwrite" };
+
+  if ((await handle.queryPermission(opts)) === "granted") return true;
+  if ((await handle.requestPermission(opts)) === "granted") return true;
+
+  return false;
+}
 
   async function maybeSyncWithServer() {
     const lastSync = localStorage.getItem(SYNC_KEY);
@@ -88,22 +96,31 @@ export default function ActivationPage() {
   }
 
   async function selectFolder() {
-    try {
-      const handle = await window.showDirectoryPicker();
-      await saveFolderHandle(handle);
+  try {
+    const handle = await window.showDirectoryPicker();
 
-      const id = await readDeviceId(handle);
-      setDeviceId(id);
-
-      const info = getTrialInfo();
-      setStatus(info.status);
-      setTrialInfo(info);
-
-      setMessage(t("activation.device_loaded"));
-    } catch (e) {
-      setMessage(t("activation.device_load_failed") + ": " + e.message);
+    // Request permission BEFORE reading
+    const ok = await ensurePermission(handle);
+    if (!ok) {
+      setMessage(t("activation.device_load_failed"));
+      return;
     }
+
+    await saveFolderHandle(handle);
+
+    const id = await readDeviceId(handle);
+    setDeviceId(id);
+
+    const info = getTrialInfo();
+    setStatus(info.status);
+    setTrialInfo(info);
+
+    setMessage(t("activation.device_loaded"));
+  } catch (e) {
+    setMessage(t("activation.device_load_failed") + ": " + e.message);
   }
+}
+
 
   async function activate() {
     try {

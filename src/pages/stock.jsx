@@ -7,6 +7,7 @@ import SupplierReturnModal from "../components/suppliers/SupplierReturnModal";
 import pdfMake from "../pdfFonts";
 import { processSupplierReturn_v2 } from "../services/returns/supplierReturn_v2";
 import { adaptSupplierReturnPayloadFromModal } from "../services/returns/adapters";
+import PharmacyLayoutModal from "../components/layout/PharmacyLayoutModal"; // adjust path to match POS
 
 // Components
 import SideNavBar from "../components/SideNavBar";
@@ -34,6 +35,8 @@ export default function Stock() {
   // Modals
   const [showAddModal, setShowAddModal] = useState(false);
   const [showAddCategoryModal, setShowAddCategoryModal] = useState(false);
+const [isLayoutOpen, setIsLayoutOpen] = useState(false);
+const [highlightData, setHighlightData] = useState(null);
 
   // NEW: Proper initialization of newItem
   const [newItem, setNewItem] = useState({
@@ -158,6 +161,7 @@ const [selectedSupplierId, setSelectedSupplierId] = useState(null);
     }
 
     
+
 async function loadCategories() {
   const cats = await db.categories.toArray();
   setCategories(cats);
@@ -203,36 +207,31 @@ loadCategories();
 
   const q = query.trim();
 
-  // English startsWith
+  // English startsWith (indexed)
   const resultsEn = await db.universalPharmacy
     .where("nameEn")
     .startsWithIgnoreCase(q)
     .limit(20)
     .toArray();
 
-  // Arabic CONTAINS (not startsWith)
+  // Arabic startsWith (indexed)
   const resultsAr = await db.universalPharmacy
-    .filter(item => item.nameAr && item.nameAr.includes(q))
+    .where("nameAr")
+    .startsWith(q)
     .limit(20)
     .toArray();
 
-  // Primary barcode startsWith
+  // Primary barcode startsWith (indexed)
   const resultsBarcode = await db.universalPharmacy
     .where("barcode")
     .startsWith(q)
     .limit(20)
     .toArray();
 
-  // Search inside allBarcodes array
+  // Multi-barcode search (indexed)
   const resultsAllBarcodes = await db.universalPharmacy
-    .filter(item => {
-      try {
-        const arr = JSON.parse(item.allBarcodes || "[]");
-        return arr.some(b => b.startsWith(q));
-      } catch {
-        return false;
-      }
-    })
+    .where("allBarcodes")
+    .startsWith(q)
     .limit(20)
     .toArray();
 
@@ -246,6 +245,7 @@ loadCategories();
 
   setUniversalResults(merged);
 };
+
 
 // Receive selected batches from StockTable
 const handleSelectReturnItems = (items) => {
@@ -817,6 +817,18 @@ const scanReturnButton = (
   </button>
 );
 
+function openLayoutEditorWithHighlightFromStock(product) {
+  if (!product) return;
+
+  setHighlightData({
+    cabinet: product.cabinet || null,
+    shelf: product.shelf || null,
+    row: product.shelfRow || null,
+    medicineName: product.nameAr || product.nameEn || "",
+  });
+
+  setIsLayoutOpen(true);
+}
 
  return (
 
@@ -887,6 +899,7 @@ const scanReturnButton = (
       sortDir={sortDir}
       onSelectReturnItems={handleSelectReturnItems}
       onReturnSingleBatch={handleReturnSingleBatch}
+       onShowLocationInMap={openLayoutEditorWithHighlightFromStock} // ✅ NEW
     />
 
   </div>
@@ -946,6 +959,15 @@ const scanReturnButton = (
         alert(t("supplier.returnCompleted") || "Return completed");
       }}
     />
+
+    {isLayoutOpen && (
+  <PharmacyLayoutModal
+    open={isLayoutOpen}
+    onClose={() => setIsLayoutOpen(false)}
+    highlight={highlightData}
+  />
+)}
+
   </div>
 );
 

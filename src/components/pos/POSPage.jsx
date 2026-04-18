@@ -8,6 +8,7 @@ import ReceiptTemplate from "./ReceiptTemplate";
 import { connectUSB, renderReceiptToImage, printReceipt, getCurrentConnection } from "../../services/thermalPrinter";
 import SideNavBar from "../SideNavBar";
 import TopAppBar from "../TopAppBar";
+import PharmacyLayoutModal from "../layout/PharmacyLayoutModal";
 
 import { SearchBar } from "./SearchBar";
 import { CartItem } from "./CartItem";
@@ -31,12 +32,16 @@ export default function POSPage() {
 
   const [currencySymbol, setCurrencySymbol] = useState("SYP");
   const [useNewCurrency, setUseNewCurrency] = useState(false);
+const [isLayoutOpen, setIsLayoutOpen] = useState(false);
+const [highlightData, setHighlightData] = useState(null);
 
   const [showSelectSaleModal, setShowSelectSaleModal] = useState(false);
   const [saleSelectionList, setSaleSelectionList] = useState([]);
   const [returnSaleId, setReturnSaleId] = useState(null);
 const [lastSale, setLastSale] = useState(null);
   useAppSettings(setCurrencySymbol, setUseNewCurrency);
+const [showMap, setShowMap] = useState(false);
+const [mapHighlight, setMapHighlight] = useState(null);
 
   const [resetInterval, setResetInterval] = useState("daily");
   const navigate = useNavigate();
@@ -168,6 +173,17 @@ useEffect(() => {
 
     setSearchResults(results);
   }
+function openMapForProduct(p) {
+  if (!p) return;
+
+  setMapHighlight({
+    cabinetId: p.cabinet || null,
+    shelfId: p.shelf || null,
+    row: p.shelfRow || null,
+  });
+
+  setShowMap(true);
+}
 
   function handleSelectProduct(p) {
     addProductToCart(p);
@@ -296,33 +312,38 @@ useEffect(() => {
         return items;
       }
 
-      return [
-        ...items,
-        {
-          id: p.id,
-          productId: p.id,
-          icon: "pill",
-          iconColorClass: "text-primary",
-          iconBgClass: "bg-sky-50 border-sky-100",
-          nameEn: p.nameEn || "",
-          nameAr: p.nameAr || "",
-          description: p.form || "",
-          quantity: 1,
+       return [
+    ...items,
+    {
+      id: p.id,
+      productId: p.id,
+      icon: "pill",
+      iconColorClass: "text-primary",
+      iconBgClass: "bg-sky-50 border-sky-100",
+      nameEn: p.nameEn || "",
+      nameAr: p.nameAr || "",
+      description: p.form || "",
+      quantity: 1,
 
-          price: p.salePrice || 0,
-          salePrice: p.salePrice || 0,
-          purchasePrice: p.purchasePrice || 0,
+      price: p.salePrice || 0,
+      salePrice: p.salePrice || 0,
+      purchasePrice: p.purchasePrice || 0,
 
-          originalPrice: p.salePrice || 0,
+      originalPrice: p.salePrice || 0,
 
-          unitType: "box",
-          envelopesInside: null,
+      unitType: "box",
+      envelopesInside: null,
 
-          location: buildLocation(p),
-          availableStock: available,
-          minQty: p.minQty || 0
-        }
-      ];
+      location: buildLocation(p),
+      availableStock: available,
+      minQty: p.minQty || 0,
+
+      // ✅ Store structured location for map highlight
+      cabinet: p.cabinet || null,
+      shelf: p.shelf || null,
+      shelfRow: p.shelfRow || null,
+    }
+  ];
     });
   }
 
@@ -499,6 +520,19 @@ setLastSale({
     setSelectedCustomerId(null);
   }
 
+function openLayoutEditorWithHighlight(item) {
+  setHighlightData({
+    cabinet: item.cabinet,
+    shelf: item.shelf,
+    row: item.shelfRow,
+    medicineName: item.nameAr || item.nameEn
+  });
+
+  setIsLayoutOpen(true);
+}
+
+
+
   async function handleCashPay(totalRawValue) {
     if (!totalRawValue || isNaN(totalRawValue)) return;
     if (cartItems.length === 0) return;
@@ -673,6 +707,9 @@ return (
                   onEnvelopeCountChange={(count) =>
                     handleEnvelopeCountChange(item.id, count)
                   }
+                  onShowInMap={() => openLayoutEditorWithHighlight(item)}
+
+
                 />
               ))}
             </div>
@@ -751,6 +788,16 @@ return (
           onClose={() => setReturnSaleId(null)}
         />
       )}
+
+      {isLayoutOpen && (
+  <PharmacyLayoutModal
+    open={isLayoutOpen}
+    onClose={() => setIsLayoutOpen(false)}
+    highlight={highlightData}
+  />
+)}
+
+
     </main>
   </div>
 );

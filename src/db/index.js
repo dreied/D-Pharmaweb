@@ -2,8 +2,8 @@ import Dexie from "dexie";
 
 export const db = new Dexie("pharmacy");
 
-// Version 10 — keeps ALL fields, only adds indexes for fast search
-db.version(11).stores({
+// Version 1 — keeps ALL fields, only adds indexes for fast search
+db.version(2).stores({
   customers: "++id, name, phone, balance, createdAt",
   customerPayments: "++id, customerId, name, amount, date, type",
   sales: "++id, customerId, paymentMethod, total, date, previousBalance, paidNow, newBalance, isDebt",
@@ -22,7 +22,8 @@ homeCashBox: "id, amount, lastReset, lastUpdated",
  homeCashBoxHistory: "++id, date, amount, type, note, color, supplierName",
 
   universalPharmacy:
-    "id, purchasePrice, salePrice, form, allBarcodes, date, boxFashion, company, indications, antidotes, c3, dosage, fact, *nameEn, *nameAr, *barcode",
+  "id, nameEn, nameAr, barcode, *allBarcodes, purchasePrice, salePrice, form, company, indications, antidotes, c3, dosage, fact, date, boxFashion",
+
 
   stockProducts:
     "++id, nameAr, nameEn, barcode, purchasePrice, salePrice, form, company, categoryId, isAccessory, minQty, shelf, shelfRow, cabinet, cabinetRow",
@@ -70,7 +71,7 @@ supplierReturnItems:
   "++id, supplierReturnId, productId, batchId, quantity, amount",
 
 notifications: "++id, type, message, link, createdAt, read",
-
+pharmacyLayout: "id", // single row: { id: 'default', layout: {...} }
 
 });
 

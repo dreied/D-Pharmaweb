@@ -26,19 +26,19 @@ export function CartItem({
   unitType,
   envelopesInside,
   onUnitTypeChange,
-  onEnvelopeCountChange
+  onEnvelopeCountChange,
+  onShowInMap
 }) {
   const { i18n, t } = useTranslation();
   const displayName =
     i18n.language === "ar" ? nameAr || nameEn : nameEn || nameAr;
 
   return (
-   <div className="relative overflow-visible bg-white/80 backdrop-blur-sm p-5 rounded-xl shadow-sm flex flex-col gap-4 group hover:shadow-md transition-shadow border border-slate-200/50">
+    <div className="relative overflow-visible bg-white/80 backdrop-blur-sm p-5 rounded-xl shadow-sm flex flex-col gap-4 group hover:shadow-md transition-shadow border border-slate-200/50">
 
-      
       {/* TOP ROW */}
       <div className="flex items-center gap-6">
-        
+
         {/* ICON */}
         <div
           className={`w-16 h-16 rounded-lg flex items-center justify-center shrink-0 border ${iconBgClass}`}
@@ -57,14 +57,13 @@ export function CartItem({
 
           {/* UNIT SELECTOR */}
           <div className="flex flex-col gap-2 mt-3">
-           <div className="relative z-50">
-  <UnitDropdown
-    value={unitType}
-    onChange={onUnitTypeChange}
-    t={t}
-  />
-</div>
-
+            <div className="relative z-50">
+              <UnitDropdown
+                value={unitType}
+                onChange={onUnitTypeChange}
+                t={t}
+              />
+            </div>
 
             {unitType === "envelope" && (
               <div>
@@ -77,7 +76,7 @@ export function CartItem({
                   min="1"
                   placeholder="0"
                   className="mt-1 w-20 px-2 py-1 rounded-md border border-outline bg-surface-container-lowest text-sm"
-                  value={envelopesInside ?? null}
+                  value={envelopesInside ?? ""}
                   onChange={(e) => onEnvelopeCountChange(Number(e.target.value))}
                 />
               </div>
@@ -87,7 +86,7 @@ export function CartItem({
 
         {/* QUANTITY + PRICE + DELETE */}
         <div className="flex items-center gap-4">
-          
+
           {/* QUANTITY CONTROLS */}
           <div className="flex items-center bg-surface-container-low rounded-lg p-1">
             <button
@@ -129,8 +128,7 @@ export function CartItem({
             )}
             <p className="font-headline font-extrabold text-primary flex items-baseline gap-1">
               <span className="text-on-surface">{displayPrice.formatted}</span>
-<span className="text-primary/70 text-sm">{displayPrice.symbol}</span>
-
+              <span className="text-primary/70 text-sm">{displayPrice.symbol}</span>
             </p>
           </div>
 
@@ -144,24 +142,31 @@ export function CartItem({
         </div>
       </div>
 
-      {/* LOCATION */}
-      {location && <LocationInfo locationText={location} />}
+  {/* LOCATION + INLINE MAP BUTTON */}
+{location && (
+  <LocationInfo
+    locationText={location}
+    onShowInMap={onShowInMap}
+  />
+)}
 
-      {/* LOW STOCK WARNING */}
-      {availableStock !== undefined && minQty > 0 &&
-        (() => {
-          const remaining = availableStock - quantity;
-          if (remaining <= minQty && remaining >= 0) {
-            return (
-              <p className="text-red-600 text-xs font-bold">
-                {i18n.language === "ar"
-                  ? `متبقي ${remaining} في المخزون`
-                  : `Only ${remaining} left in stock`}
-              </p>
-            );
-          }
-          return null;
-        })()}
+{/* LOW STOCK WARNING */}
+{availableStock !== undefined && minQty > 0 &&
+  (() => {
+    const remaining = availableStock - quantity;
+    if (remaining <= minQty && remaining >= 0) {
+      return (
+        <p className="text-red-600 text-xs font-bold">
+          {i18n.language === "ar"
+            ? `متبقي ${remaining} في المخزون`
+            : `Only ${remaining} left in stock`}
+        </p>
+      );
+    }
+    return null;
+  })()
+}
+
     </div>
   );
 }

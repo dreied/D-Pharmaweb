@@ -89,7 +89,7 @@
     "searchPlaceholder": "ابحث بالاسم أو الباركود...",
     "searchUniversal": "البحث في قاعدة بيانات الأدوية...",
     "selectCategory": "اختر فئة",
-    "shelf": "الرف",
+    "shelf": "القسم",
     "stats": {
       "almostExpired": "قريب الانتهاء",
       "almostExpiredItems": "منتجات أوشكت على الانتهاء",
@@ -120,7 +120,9 @@
   "saved": "تم حفظ النسخة الاحتياطية بنجاح"
 },
   "settings": {
-    
+     "pharmacyLayout": "مخطط الصيدلية",
+  "pharmacyLayoutDescription": "قم بتعديل خريطة الخزائن والرفوف والصفوف المستخدمة في نقطة البيع.",
+  "editLayout": "تعديل المخطط",
   "appVersion": "نسخة التطبيق",
   "developerName": "اسم المطوّر",
   "email": "البريد الإلكتروني",
@@ -209,7 +211,7 @@
     "update": {
 "universalViewer": {
       "title": "عارض قاعدة البيانات الشاملة",
-      "description": "عرض، بحث، تصفية، وتعديل جميع المنتجات البالغ عددها ٢٠٬٢٠٣ في قاعدة البيانات الشاملة.",
+      "description": "عرض، بحث، تصفية، وتعديل جميع المنتجات  في قاعدة البيانات الشاملة.",
       "openButton": "فتح العارض"
     },
 
@@ -973,6 +975,46 @@
     "cancel": "إلغاء",
     "save": "حفظ"
   },
-    "confirm.delete": "هل أنت متأكد أنك تريد الحذف؟"
+    "confirm.delete": "هل أنت متأكد أنك تريد الحذف؟",
+    "update": {
+  "newVersion": "إصدار جديد من دي-فارما متاح",
+  "refresh": "تحديث",
+  "later": "لاحقاً"
+},
+"layout": {
+    "title": "مخطط الصيدلية",
+    "edit": "تعديل المخطط",
+    "save": "حفظ المخطط",
+    "cancel": "إلغاء",
+    "cabinet": "خزانة",
+    "shelf": "قسم",
+    "row": "صف",
+    "show_in_map": "عرض على الخريطة",
+    "shelfColor": "لون القسم",
+"resetZoom": "إعادة تعيين",
+"label": "الاسم",
+"color":"لون الخزانة",
+"type":"الفئة",
+"type.none":"بلا",
+"type.medicines":"أدوية",
+    "type.cosmetics":"مستحضرات تجميل",
+    "type.baby":"مستحضرات أطفال",
+    "type.supplements":"مكملات غذائية",
+    "type.skin":"للبشرة",
+"rotation ":"الدوران ",
+    "door": "باب ",
+"doors": "أبواب",
+"doorRows": "صفوف الباب",
+
+"doorColor":"لون قسم الأبواب",
+"facing": "الاتجاه",
+"facing.front": "أمامي",
+"facing.back": "خلفي ",
+"facing.left": "يسار",
+"facing.right": "يمين",
+"undo":"تراجع",
+"redo":"إعادة"
+
+  }
 
 }

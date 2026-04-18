@@ -29,12 +29,16 @@ import {
   loadFolderHandle,
   saveFolderHandle,
   readDeviceId,
-  tryAutoDetectFolder
+  pickDeviceFolder
 } from "./utils/deviceFolder";
 
 import { setDeviceId } from "./utils/license";
+import { loadUniversalIfEmpty } from "./db/loadUniversal.js";
 
 import "./theme.css";
+
+// ⭐ Update popup
+import UpdatePrompt from "./components/UpdatePrompt";
 
 export const ThemeContext = createContext();
 
@@ -45,6 +49,9 @@ export default function App() {
 
   const [theme, setTheme] = useState("blue");
 
+  // ⭐ NEW: First‑time import loading state
+  const [initialImportLoading, setInitialImportLoading] = useState(true);
+
   /* ============================================================
      🔥 GLOBAL DEVICE ID LOADING — REQUIRED FOR LICENSE SYSTEM
   ============================================================ */
@@ -53,7 +60,7 @@ export default function App() {
       let handle = await loadFolderHandle();
 
       if (!handle) {
-        const auto = await tryAutoDetectFolder();
+        const auto = await pickDeviceFolder();
         if (auto) {
           handle = auto;
           await saveFolderHandle(auto);
@@ -64,10 +71,23 @@ export default function App() {
         try {
           const id = await readDeviceId(handle);
           console.log("GLOBAL DEVICE ID LOADED:", id);
-          setDeviceId(id); // ⭐ THIS FIXES no_device_id
+          setDeviceId(id);
         } catch (e) {
           console.error("Failed to load device ID:", e);
         }
+      }
+    })();
+  }, []);
+
+  /* ============================================================
+     ⭐ NEW: FIRST‑TIME UNIVERSAL IMPORT
+  ============================================================ */
+  useEffect(() => {
+    (async () => {
+      try {
+        await loadUniversalIfEmpty();
+      } finally {
+        setInitialImportLoading(false);
       }
     })();
   }, []);
@@ -104,13 +124,36 @@ export default function App() {
   }
 
   const isLocked =
-  state.status === "no_device_id" ||
-  state.status === "expired" ||
-  (state.status === "trial" && trialInfo.daysLeft <= 0);
-
+    state.status === "no_device_id" ||
+    state.status === "expired" ||
+    (state.status === "trial" && trialInfo.daysLeft <= 0);
 
   if (isLocked) {
     return <ActivationPage />;
+  }
+
+  /* ============================================================
+     ⭐ NEW: FIRST‑TIME IMPORT SPINNER
+  ============================================================ */
+  if (initialImportLoading) {
+    return (
+      <div
+        style={{
+          height: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          gap: "20px",
+          color: "var(--on-surface)"
+        }}
+      >
+        <div className="loader"></div>
+        <div style={{ fontSize: "18px", opacity: 0.8 }}>
+          Loading pharmacy database…
+        </div>
+      </div>
+    );
   }
 
   /* ============================================================
@@ -118,7 +161,8 @@ export default function App() {
   ============================================================ */
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <BrowserRouter>
+      <BrowserRouter basename="/d-pharma-web">
+
         <Routes>
           <Route path="/" element={<POS />} />
           <Route path="/dashboard" element={<Stock />} />
@@ -140,6 +184,9 @@ export default function App() {
           <Route path="/logout" element={<Navigate to="/login" replace />} />
         </Routes>
       </BrowserRouter>
+
+      {/* ⭐ Update popup */}
+      <UpdatePrompt />
     </ThemeContext.Provider>
   );
 }

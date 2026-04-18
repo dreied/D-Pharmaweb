@@ -15,6 +15,7 @@ export default function StockTable({
   currencySymbol,
   onSelectReturnItems,
   onReturnSingleBatch,
+  onShowLocationInMap,
 }) {
   const { t } = useTranslation();
   const { currentUser } = useAuth();
@@ -199,19 +200,24 @@ export default function StockTable({
                 </td>
 
                 {/* LOCATION */}
-                <td
-                  className={`px-6 py-5 text-sm ${
-                    isRTL ? "text-right" : "text-left"
-                  }`}
-                >
-                  <span className="bg-surface-container-high px-2 py-1 rounded font-mono text-xs font-bold text-on-surface">
-                    {renderLocationCompact(
-                      p.cabinet,
-                      p.shelf,
-                      p.shelfRow
-                    )}
-                  </span>
-                </td>
+<td
+  className={`px-6 py-5 text-sm ${
+    isRTL ? "text-right" : "text-left"
+  }`}
+>
+  <button
+    type="button"
+    className="bg-surface-container-high px-2 py-1 rounded font-mono text-xs font-bold text-on-surface hover:bg-primary/10 hover:text-primary transition-colors cursor-pointer"
+    onClick={() => {
+      if (onShowLocationInMap) {
+        onShowLocationInMap(p);
+      }
+    }}
+  >
+    {renderLocationCompact(p.cabinet, p.shelf, p.shelfRow)}
+  </button>
+</td>
+
 
                 {/* EXPIRY */}
                 <td

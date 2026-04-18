@@ -13,7 +13,7 @@ import {
   saveFolderHandle,
   loadFolderHandle,
   readDeviceId,
-  tryAutoDetectFolder,
+  pickDeviceFolder,
 } from "../../utils/deviceFolder";
 
 const SYNC_KEY = "dpharmacy_last_sync";
@@ -32,7 +32,7 @@ export default function ActivationSettings() {
       let handle = await loadFolderHandle();
 
       if (!handle) {
-        const auto = await tryAutoDetectFolder();
+        const auto = await pickDeviceFolder();
         if (auto) {
           handle = auto;
           await saveFolderHandle(auto);

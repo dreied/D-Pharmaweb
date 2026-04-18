@@ -50,39 +50,41 @@ export async function fetchWithProgress(url, onProgress) {
 
 // تطبيع صف واحد من JSON GitHub إلى شكل Dexie
 export function normalizeRow(row) {
-  const barcodes = (row["barcode_ArraabPharm_17"] || "")
-    .split(",")
-    .map((b) => b.trim())
-    .filter(Boolean);
+  // ID must exist
+  if (!row.id && row.id !== 0) return null;
+
+  const id = String(row.id).trim();
+  if (!id) return null;
+
+  const barcode = row.barcode || "";
+  const allBarcodes = barcode ? [barcode] : [];
 
   return {
-    id: row["prdID_ArraabPharm_17"],
-    nameAr: row["name_ArraabPharm_17"] || "",
-    nameEn: row["updateName_ArraabPharm_17"] || "",
-    purchasePrice:
-      row["lastpurchasedPrice_ArraabPharm_17"] != null
-        ? Number(row["lastpurchasedPrice_ArraabPharm_17"])
-        : null,
-    salePrice:
-      row["endUserPrice_ArraabPharm_17"] != null
-        ? Number(row["endUserPrice_ArraabPharm_17"])
-        : null,
-    form: row["formation_ArraabPharm_17"] || "",
-    barcode: barcodes[0] || "",
-    allBarcodes: JSON.stringify(barcodes),
-    date: row["date_ArraabPharm_17"] || "",
-    boxFashion: row["updateBoxFashion_ArraabPharm_17"] || "",
-    company: row["category_ArraabPharm_17"] || "",
-    indications: row["c1_ArraabPharm_17"] || "",
-    antidotes: row["c2_ArraabPharm_17"] || "",
-    c3: row["c3_ArraabPharm_17"] || "",
-    dosage: row["c4_ArraabPharm_17"] || "",
-    fact: row["Fact_ArraabPharm_17"] || ""
+    id,
+    nameAr: row.nameAr || "",
+    nameEn: row.nameEn || "",
+    purchasePrice: row.purchasePrice ?? null,
+    salePrice: row.salePrice ?? null,
+    form: row.form || "",
+    barcode,
+    allBarcodes: JSON.stringify(allBarcodes),
+    date: row.date || "",
+    boxFashion: row.boxFashion || "",
+    company: row.company || "",
+    indications: row.indications || "",
+    antidotes: row.antidotes || "",
+    c3: row.c3 || "",
+    dosage: row.dosage || "",
+    fact: row.fact || ""
   };
 }
 
+
+
 // تطبيع بيانات Dexie القديمة لتطابق الجديدة قبل diff
 export function normalizeOldItem(item) {
+  console.log("🔥 NEW NORMALIZE ROW IS RUNNING", row);
+
   let parsedBarcodes = [];
   try {
     parsedBarcodes = item.allBarcodes
