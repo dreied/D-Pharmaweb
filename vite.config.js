@@ -4,19 +4,20 @@ import { VitePWA } from "vite-plugin-pwa";
 import { version } from "./package.json";
 
 export default defineConfig({
-  // REQUIRED for GitHub Pages
-  base: "/d-pharma-web/",
+  base: "/D-Pharmaweb/",
 
   plugins: [
     react(),
 
     VitePWA({
-      registerType: "autoUpdate",
+      registerType: "prompt",
+      filename: "sw.js",
 
       includeAssets: [
         "favicon.svg",
         "favicon.ico",
-        "apple-touch-icon.png"
+        "apple-touch-icon.png",
+        "default-logo.png"
       ],
 
       manifest: {
@@ -27,8 +28,9 @@ export default defineConfig({
         background_color: "#ffffff",
         display: "standalone",
 
-        // IMPORTANT for GitHub Pages
-        start_url: "/d-pharma-web/",
+        start_url: "/D-Pharmaweb/",
+scope: "/D-Pharmaweb/",
+
 
         icons: [
           {
@@ -45,11 +47,14 @@ export default defineConfig({
       },
 
       workbox: {
+        cleanupOutdatedCaches: true,
+        skipWaiting: true,
+        clientsClaim: true,
+
         globPatterns: ["**/*.{js,css,html,ico,png,svg,ttf,woff,woff2}"],
         maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
 
         runtimeCaching: [
-          // Cache FontAwesome CSS
           {
             urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/font-awesome\/6\.5\.0\/css\/all\.min\.css$/i,
             handler: "CacheFirst",
@@ -57,12 +62,10 @@ export default defineConfig({
               cacheName: "fa-css-cache",
               expiration: {
                 maxEntries: 5,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
+                maxAgeSeconds: 60 * 60 * 24 * 365
               }
             }
           },
-
-          // Cache FontAwesome webfonts (WhatsApp icon included)
           {
             urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/font-awesome\/6\.5\.0\/webfonts\/.*\.(woff2|woff)$/i,
             handler: "CacheFirst",

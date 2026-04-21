@@ -3,7 +3,7 @@ import Dexie from "dexie";
 export const db = new Dexie("pharmacy");
 
 // Version 1 — keeps ALL fields, only adds indexes for fast search
-db.version(3).stores({
+db.version(1).stores({
   customers: "++id, name, phone, balance, createdAt",
   customerPayments: "++id, customerId, name, amount, date, type",
   sales: "++id, customerId, paymentMethod, total, date, previousBalance, paidNow, newBalance, isDebt",

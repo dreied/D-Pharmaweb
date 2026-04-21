@@ -14,6 +14,7 @@ export default function UpdatePrompt() {
   useEffect(() => {
     const updateSW = registerSW({
       onNeedRefresh() {
+        console.log("🔥 UPDATE AVAILABLE");
         setOpen(true);
       },
       onRegisteredSW(sw) {

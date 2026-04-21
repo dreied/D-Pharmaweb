@@ -1,9 +1,10 @@
 {
   "name": "d-pharmacy",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.2",
   "type": "module",
-  "homepage": "https://dreied.github.io/d-pharma-web",
+  "homepage": "https://dreied.github.io/D-Pharmaweb",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",

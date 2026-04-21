@@ -2,7 +2,7 @@
   "name": "D-Pharma",
   "short_name": "D-Pharma",
   "description": "D-Pharma pharmacy management system",
-  "start_url": "/d-pharma-web/",
+  "start_url": "/D-Pharmaweb/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0d47a1",
