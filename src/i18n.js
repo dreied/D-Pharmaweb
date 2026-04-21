@@ -14,15 +14,13 @@ i18n
       ar: { translation: ar }
     },
 
-    // ⭐ Force Arabic as default
+    // Default language
     lng: "ar",
-
-    // ⭐ If something missing → fallback to Arabic
     fallbackLng: "ar",
 
     detection: {
-      // ⭐ Disable browser override
-      order: ["localStorage", "querystring", "cookie"],
+      // Only use saved preference, not browser language
+      order: ["localStorage"],
       caches: ["localStorage"]
     },
 

@@ -20,7 +20,7 @@ import ChangePassword from "./pages/ChangePassword.jsx";
 
 import LoginScreen from "./components/auth/LoginScreen";
 import ActivationPage from "./pages/ActivationPage";
-
+import PharmacyView3DPage from "./components/PharmacyView3DPage";
 import { db } from "./db/index";
 import { useAuth } from "./context/AuthContext";
 import { useLicense } from "./context/LicenseContext";
@@ -182,6 +182,7 @@ export default function App() {
 
           <Route path="/login" element={<LoginScreen />} />
           <Route path="/logout" element={<Navigate to="/login" replace />} />
+          <Route path="/pharmacy-layout" element={<PharmacyView3DPage />} />
         </Routes>
       </BrowserRouter>
 

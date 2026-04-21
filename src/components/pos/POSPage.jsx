@@ -8,8 +8,8 @@ import ReceiptTemplate from "./ReceiptTemplate";
 import { connectUSB, renderReceiptToImage, printReceipt, getCurrentConnection } from "../../services/thermalPrinter";
 import SideNavBar from "../SideNavBar";
 import TopAppBar from "../TopAppBar";
-import PharmacyLayoutModal from "../layout/PharmacyLayoutModal";
-
+import Pharmacy3DModal from "../Pharmacy3DModal"; // ✅ use the new modal
+import { loadPharmacyLayout } from "../../db/layoutStorage";
 import { SearchBar } from "./SearchBar";
 import { CartItem } from "./CartItem";
 import { CheckoutSummary } from "./CheckoutSummary";
@@ -29,11 +29,11 @@ import ReturnSaleModal_v2 from "./ReturnSaleModal_v2";
 export default function POSPage() {
   const { t } = useTranslation();
   const { theme } = useContext(ThemeContext);
-
+const { i18n } = useTranslation();
   const [currencySymbol, setCurrencySymbol] = useState("SYP");
   const [useNewCurrency, setUseNewCurrency] = useState(false);
 const [isLayoutOpen, setIsLayoutOpen] = useState(false);
-const [highlightData, setHighlightData] = useState(null);
+  const [highlightData, setHighlightData] = useState(null);
 
   const [showSelectSaleModal, setShowSelectSaleModal] = useState(false);
   const [saleSelectionList, setSaleSelectionList] = useState([]);
@@ -51,7 +51,14 @@ const [mapHighlight, setMapHighlight] = useState(null);
 
   const endOfToday = new Date();
   endOfToday.setHours(23, 59, 59, 999);
-
+const [layout, setLayout] = useState(null);
+const layoutRef = useRef(null);
+useEffect(() => {
+  loadPharmacyLayout().then((l) => {
+    setLayout(l);
+    layoutRef.current = l;
+  });
+}, []);
   const todaysSales =
     useLiveQuery(
       () =>
@@ -521,15 +528,26 @@ setLastSale({
   }
 
 function openLayoutEditorWithHighlight(item) {
+  const medicineName =
+    i18n.language === "ar" ? item.nameAr : item.nameEn || item.nameAr;
+
+  const cab = layoutRef.current?.cabinets?.find(
+    (c) => c.label === item.cabinet || c.label === `الخزانة ${item.cabinet}`
+  );
+
   setHighlightData({
-    cabinet: item.cabinet,
-    shelf: item.shelf,
-    row: item.shelfRow,
-    medicineName: item.nameAr || item.nameEn
+    cabinetLabel: cab?.label || item.cabinet,
+    shelfLabel: `قسم ${item.shelf}`,   // ✅ match layout shelf label
+    rowLabel: String(item.shelfRow),    // ✅ ensure string
+    wall: cab?.wall || "front",
+    medicineName,
   });
 
   setIsLayoutOpen(true);
 }
+
+
+
 
 
 
@@ -789,13 +807,14 @@ return (
         />
       )}
 
+      {/* Modal */}
       {isLayoutOpen && (
-  <PharmacyLayoutModal
-    open={isLayoutOpen}
-    onClose={() => setIsLayoutOpen(false)}
-    highlight={highlightData}
-  />
-)}
+        <Pharmacy3DModal
+          open={isLayoutOpen}
+          onClose={() => setIsLayoutOpen(false)}
+          highlight={highlightData}
+        />
+      )}
 
 
     </main>

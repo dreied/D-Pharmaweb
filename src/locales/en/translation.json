@@ -999,43 +999,58 @@
   "later": "Later"
 },
 
-"layout": {
-    "title": "Pharmacy Layout",
-    "edit": "Edit layout",
-    "save": "Save layout",
-    "cancel": "Cancel",
+"pharmacyEditor3D": {
+    "select": "Select",
+    "drawCabinet": "Draw cabinet",
+    "reset": "Reset",
+    "noPhoto": "No photo for wall",
+    "uploadPhoto": "Upload wall photo",
+    "replacePhoto": "Replace photo",
+    "removePhoto": "Remove photo",
+    "inspector": "Inspector",
+    "selectCabinetHint": "Select a cabinet to view details",
+    "drawHint": "Use draw tool to add a new cabinet",
+    "cabinetsOn": "Cabinets on",
+    "wall": {
+      "front": "Front Wall",
+      "back": "Back Wall",
+      "left": "Left Wall",
+      "right": "Right Wall"
+    },
+    "none": "None",
     "cabinet": "Cabinet",
-    "shelf": "Shelf",
-    "row": "Row",
-    "show_in_map": "Show in map",
-    "shelfColor": "Shelf Color",
-"resetZoom": "Reset",
-"label": "Label",
-"color":"Cabinet color ",
+    "sections": "Sections",
+    "label": "Label",
+    "color": "Color",
+    "doorSections": "Cabinet doors",
+    "addTopDoor": "Add top door",
+    "addBottomDoor": "Add bottom door",
+    "shelves": "Shelves",
+    "addShelf": "Add shelf",
+    "rows": "Rows",
+    "deleteCabinet": "Delete cabinet"
+},
+"pharmacy3dPage": {
+    "title": "Pharmacy Layout",
+    "editor": "Editor",
+    "save": "Save",
+    "back": "Back",
+    "loading": "Loading layout…",
+    "saving": "Saving…",
+    "saved": "Saved",
+    "view3d": "3D View"
+  },
 
-"type":"Type",
-"type.none":"None",
- "type.medicines":"Medicines",
-    "type.cosmetics":"Cosmetics",
-    "type.baby":"Babies",
-    "type.supplements":"Supplements",
-    "type.skin":"Skin",
-    "door": " Door",
-"doors": " Doors",
-"doorRows": "Door Rows",
-"rotation ":"rotation ",
-"doorColor":"Door Color",
-"facing": " Facing",
-"facing.front": "Front",
-"facing.back": " Back",
-"facing.left": "  Left",
-"facing.right": "  Right",
-"undo":"Undo",
-"redo":"Redo"
+  "singleWallViewer": {
+    "noWall": "No wall selected"
+  },
+  "pharmacy": {
+    "modal": {
+      "locationOf": "Location of",
+      "medicineLocation": "Medicine Location",
+      "close": "Close",
+      "reset": "Reset",
+      "loading": "Loading…"
+    }
   }
-
-  
-
-
-
 }

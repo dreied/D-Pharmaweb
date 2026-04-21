@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { db } from "../db";
@@ -7,8 +7,8 @@ import SupplierReturnModal from "../components/suppliers/SupplierReturnModal";
 import pdfMake from "../pdfFonts";
 import { processSupplierReturn_v2 } from "../services/returns/supplierReturn_v2";
 import { adaptSupplierReturnPayloadFromModal } from "../services/returns/adapters";
-import PharmacyLayoutModal from "../components/layout/PharmacyLayoutModal"; // adjust path to match POS
-
+import { loadPharmacyLayout } from "../db/layoutStorage";
+import Pharmacy3DModal from "../components/Pharmacy3DModal"
 // Components
 import SideNavBar from "../components/SideNavBar";
 import TopAppBar from "../components/TopAppBar";
@@ -36,7 +36,9 @@ export default function Stock() {
   const [showAddModal, setShowAddModal] = useState(false);
   const [showAddCategoryModal, setShowAddCategoryModal] = useState(false);
 const [isLayoutOpen, setIsLayoutOpen] = useState(false);
-const [highlightData, setHighlightData] = useState(null);
+  const [highlightData, setHighlightData] = useState(null);
+  const [layout, setLayout] = useState(null);
+  const layoutRef = useRef(null);
 
   // NEW: Proper initialization of newItem
   const [newItem, setNewItem] = useState({
@@ -97,6 +99,14 @@ const [selectedSupplierId, setSelectedSupplierId] = useState(null);
     (sum, item) => sum + (item.product?.purchasePrice || 0) * item.totalQty,
     0
   );
+
+// Load layout once
+  useEffect(() => {
+    loadPharmacyLayout().then((l) => {
+      setLayout(l);
+      layoutRef.current = l;
+    });
+  }, []);
 
   // ⭐ WORKING ARABIC RESHAPER (no bidi, no dependencies)
   function reshapeArabic(text) {
@@ -820,15 +830,26 @@ const scanReturnButton = (
 function openLayoutEditorWithHighlightFromStock(product) {
   if (!product) return;
 
+  const medicineName =
+    i18n.language === "ar" ? product.nameAr : product.nameEn || product.nameAr;
+
+  const cab = layoutRef.current?.cabinets?.find(
+    (c) => String(c.label) === String(product.cabinet)
+  );
+
   setHighlightData({
-    cabinet: product.cabinet || null,
-    shelf: product.shelf || null,
-    row: product.shelfRow || null,
-    medicineName: product.nameAr || product.nameEn || "",
+    cabinetLabel: cab?.label || String(product.cabinet),
+    shelfLabel: product.shelf?.startsWith("قسم")
+      ? product.shelf
+      : `قسم ${product.shelf}`,   // ✅ ensure it matches layout
+    rowLabel: String(product.shelfRow),
+    wall: cab?.wall || "front",
+    medicineName,
   });
 
   setIsLayoutOpen(true);
 }
+
 
  return (
 
@@ -961,12 +982,12 @@ function openLayoutEditorWithHighlightFromStock(product) {
     />
 
     {isLayoutOpen && (
-  <PharmacyLayoutModal
-    open={isLayoutOpen}
-    onClose={() => setIsLayoutOpen(false)}
-    highlight={highlightData}
-  />
-)}
+        <Pharmacy3DModal
+          open={isLayoutOpen}
+          onClose={() => setIsLayoutOpen(false)}
+          highlight={highlightData}
+        />
+      )}
 
   </div>
 );

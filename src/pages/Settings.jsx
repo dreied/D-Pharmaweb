@@ -904,13 +904,14 @@ return (
     {t("settings.pharmacyLayoutDescription")}
   </p>
 
-  <button
-    onClick={() => setShowLayoutEditor(true)}
-    className="px-6 py-2 bg-primary text-on-primary rounded-xl font-bold shadow flex items-center gap-2"
-  >
-    <span className="material-symbols-outlined">edit</span>
-    {t("settings.editLayout")}
-  </button>
+ <button
+  onClick={() => navigate("/pharmacy-layout")}
+  className="px-6 py-2 bg-primary text-on-primary rounded-xl font-bold shadow flex items-center gap-2"
+>
+  <span className="material-symbols-outlined">edit</span>
+  {t("settings.editLayout")}
+</button>
+
 </div>
 
         </div>
@@ -1655,7 +1656,7 @@ return (
     onConfirm={passwordModal.onConfirm}
     onCancel={() => setPasswordModal(null)}
   />
-)},
+)}
 {restoreMessage && (
   <div className="p-3 rounded-xl bg-surface-container-high text-on-surface text-sm">
     {restoreMessage}

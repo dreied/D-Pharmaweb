@@ -3,7 +3,7 @@ import Dexie from "dexie";
 export const db = new Dexie("pharmacy");
 
 // Version 1 — keeps ALL fields, only adds indexes for fast search
-db.version(2).stores({
+db.version(3).stores({
   customers: "++id, name, phone, balance, createdAt",
   customerPayments: "++id, customerId, name, amount, date, type",
   sales: "++id, customerId, paymentMethod, total, date, previousBalance, paidNow, newBalance, isDebt",
@@ -70,7 +70,7 @@ supplierReturns:
 supplierReturnItems:
   "++id, supplierReturnId, productId, batchId, quantity, amount",
 
-notifications: "++id, type, message, link, createdAt, read",
+notifications: "++id, [type+message], type, message, link, createdAt, read",
 pharmacyLayout: "id", // single row: { id: 'default', layout: {...} }
 
 });

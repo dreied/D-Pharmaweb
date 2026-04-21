@@ -27,7 +27,8 @@ export default function SideNavBar() {
   );
 
   const pharmacyName = pharmacyNameSetting?.value || "My Pharmacy";
-  const logo = pharmacyLogoSetting?.value || "/default-logo.png";
+  const logo = pharmacyLogoSetting?.value || "/d-pharma-web/default-logo.png";
+
 
   // Safe trial banner logic
   const showBanner =

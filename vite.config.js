@@ -9,13 +9,16 @@ export default defineConfig({
 
   plugins: [
     react(),
+
     VitePWA({
       registerType: "autoUpdate",
+
       includeAssets: [
         "favicon.svg",
         "favicon.ico",
         "apple-touch-icon.png"
       ],
+
       manifest: {
         name: "D-Pharma",
         short_name: "D-Pharma",
@@ -24,17 +27,17 @@ export default defineConfig({
         background_color: "#ffffff",
         display: "standalone",
 
-        // IMPORTANT: GitHub Pages start URL
+        // IMPORTANT for GitHub Pages
         start_url: "/d-pharma-web/",
 
         icons: [
           {
-            src: "/d-pharma-web/icons/icon-192.png",
+            src: "icons/icon-192.png",
             sizes: "192x192",
             type: "image/png"
           },
           {
-            src: "/d-pharma-web/icons/icon-512.png",
+            src: "icons/icon-512.png",
             sizes: "512x512",
             type: "image/png"
           }
@@ -42,8 +45,36 @@ export default defineConfig({
       },
 
       workbox: {
-        globPatterns: ["**/*.{js,css,html,ico,png,svg,ttf}"],
-        maximumFileSizeToCacheInBytes: 10 * 1024 * 1024
+        globPatterns: ["**/*.{js,css,html,ico,png,svg,ttf,woff,woff2}"],
+        maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
+
+        runtimeCaching: [
+          // Cache FontAwesome CSS
+          {
+            urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/font-awesome\/6\.5\.0\/css\/all\.min\.css$/i,
+            handler: "CacheFirst",
+            options: {
+              cacheName: "fa-css-cache",
+              expiration: {
+                maxEntries: 5,
+                maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
+              }
+            }
+          },
+
+          // Cache FontAwesome webfonts (WhatsApp icon included)
+          {
+            urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/font-awesome\/6\.5\.0\/webfonts\/.*\.(woff2|woff)$/i,
+            handler: "CacheFirst",
+            options: {
+              cacheName: "fa-fonts-cache",
+              expiration: {
+                maxEntries: 20,
+                maxAgeSeconds: 60 * 60 * 24 * 365
+              }
+            }
+          }
+        ]
       }
     })
   ],

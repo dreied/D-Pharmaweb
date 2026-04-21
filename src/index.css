@@ -109,3 +109,8 @@ html, body, * {
 .fa-brands {
   font-family: "Font Awesome 6 Brands" !important;
 }
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}

@@ -256,7 +256,7 @@
     "customerDebtBook": "دفتر ديون الزبائن",
     "date": "التاريخ",
     "debt": "دين",
-    "debtLimitNote": "* حد الدين لهذا العميل: {{limit}}",
+    "debtLimitNote": "* حد الدين لهذ الزبون: {{limit}}",
     "discount": "الخصم",
     "emptyCart": "السلة فارغة",
     "invoiceId": "رقم الفاتورة",
@@ -348,8 +348,8 @@
 
   "debtBook": {
    
-    "printTitle": "تقرير ديون العملاء",
-    "printAll": "طباعة جميع العملاء",
+    "printTitle": "تقرير ديون الزبائن",
+    "printAll": "طباعة جميع الزبائن",
     "exportPDF": "تصدير PDF",
     "exportExcel": "تصدير Excel",
     "kindPurchase": "عملية  شراء",
@@ -361,12 +361,12 @@
   "cannotDeleteHasDebt": "لا يمكن حذف هذا الزبون لأنه ما زال لديه دين غير مسدد.",
   "confirmDelete": "هل أنت متأكد أنك تريد حذف {{name}}؟",
 
-    "addCustomer": "إضافة عميل جديد",
+    "addCustomer": "إضافة زبون جديد",
     "amount": "المبلغ",
     "cancel": "إلغاء",
     "cards": {
       "criticalArrears": {
-        "description": "{{count}} عميل لديهم ديون متأخرة لأكثر من 30 يومًا",
+        "description": "{{count}} زبون لديهم ديون متأخرة لأكثر من 30 يومًا",
         "title": "ديون حرجة",
         
   "overdue": "متأخرون لأكثر من 30 يوم",
@@ -395,13 +395,13 @@
     "enterPastDebt": "أدخل الدين السابق (اختياري)",
     "idLabel": "المعرف",
     "lastPurchase": "آخر عملية شراء",
-    "noCustomers": "لا يوجد عملاء",
+    "noCustomers": "لا يوجد زبائن",
     "noPurchases": "لا توجد مشتريات",
     "pageSubtitle": "متابعة الديون المستحقة وحركة الزبائن",
     "pageTitle": "دفتر الديون",
     "paymentHistory": "سجل الدفع",
     "settlePayment": "تسوية الدين",
-    "showingRange": "عرض {{start}}–{{end}} من أصل {{total}} عميل",
+    "showingRange": "عرض {{start}}–{{end}} من أصل {{total}} زبون",
     "status": {
       "noPurchases": "لا توجد مشتريات",
       "over15": "متأخر 15 يومًا",
@@ -409,7 +409,7 @@
       "withinTerm": "ضمن المدة"
     },
     "subtitle": "عرض شامل لجميع الزبائن ذوي الأرصدة المستحقة",
-    "title": "ديون العملاء",
+    "title": "ديون الزبائن",
     "totalDebt": "إجمالي الدين",
     "totalDebtFor": "إجمالي الديون المستحقة لـ",
     "totalOutstanding": "إجمالي الديون المستحقة",
@@ -981,40 +981,58 @@
   "refresh": "تحديث",
   "later": "لاحقاً"
 },
-"layout": {
-    "title": "مخطط الصيدلية",
-    "edit": "تعديل المخطط",
-    "save": "حفظ المخطط",
-    "cancel": "إلغاء",
-    "cabinet": "خزانة",
-    "shelf": "قسم",
-    "row": "صف",
-    "show_in_map": "عرض على الخريطة",
-    "shelfColor": "لون القسم",
-"resetZoom": "إعادة تعيين",
-"label": "الاسم",
-"color":"لون الخزانة",
-"type":"الفئة",
-"type.none":"بلا",
-"type.medicines":"أدوية",
-    "type.cosmetics":"مستحضرات تجميل",
-    "type.baby":"مستحضرات أطفال",
-    "type.supplements":"مكملات غذائية",
-    "type.skin":"للبشرة",
-"rotation ":"الدوران ",
-    "door": "باب ",
-"doors": "أبواب",
-"doorRows": "صفوف الباب",
-
-"doorColor":"لون قسم الأبواب",
-"facing": "الاتجاه",
-"facing.front": "أمامي",
-"facing.back": "خلفي ",
-"facing.left": "يسار",
-"facing.right": "يمين",
-"undo":"تراجع",
-"redo":"إعادة"
-
+"pharmacyEditor3D": {
+    "select": "تحديد",
+    "drawCabinet": "رسم خزانة",
+    "reset": "إعادة الضبط",
+    "noPhoto": "لا توجد صورة للجدار",
+    "uploadPhoto": "رفع صورة للجدار",
+    "replacePhoto": "استبدال الصورة",
+    "removePhoto": "حذف الصورة",
+    "inspector": "المحرر",
+    "selectCabinetHint": "اختر خزانة لعرض تفاصيلها",
+    "drawHint": "استخدم أداة الرسم لإضافة خزانة جديدة",
+    "cabinetsOn": "الخزائن على",
+    "wall": {
+      "front": "الجدار الأمامي",
+      "back": "الجدار الخلفي",
+      "left": "الجدار الأيسر",
+      "right": "الجدار الأيمن"
+    },
+    "none": "لا يوجد",
+    "cabinet": "الخزانة",
+    "sections": "أقسام",
+    "label": "الاسم",
+    "color": "اللون",
+    "doorSections": "أبواب الخزانة",
+    "addTopDoor": "إضافة باب علوي",
+    "addBottomDoor": "إضافة باب سفلي",
+    "shelves": "الأقسام",
+    "addShelf": "إضافة قسم",
+    "rows": "عدد الصفوف",
+    "deleteCabinet": "حذف الخزانة"
+  },
+  "pharmacy3dPage": {
+    "title": "تخطيط الصيدلية",
+    "editor": "المحرر",
+    "save": "حفظ",
+    "back": "رجوع",
+    "loading": "جارٍ تحميل التخطيط…",
+    "saving": "جارٍ الحفظ…",
+    "saved": "تم الحفظ",
+    "view3d": "عرض ثلاثي الأبعاد"
+  },
+  "singleWallViewer": {
+    "noWall": "لم يتم اختيار جدار"
+  },
+  "pharmacy": {
+    "modal": {
+      "locationOf": "موقع",
+      "medicineLocation": "موقع الدواء",
+      "close": "إغلاق",
+      "reset": "إعادة الضبط",
+      "loading": "جارٍ التحميل…"
+    }
   }
 
 }
